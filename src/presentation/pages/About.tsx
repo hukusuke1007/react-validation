@@ -6,9 +6,11 @@ import {
    useLocation
 } from 'react-router-dom'
 import '../../App.css'
-import { PageType } from '../common/Types'
-import { SampleTextArea } from '../component/Sample'
-import { InputType } from '../common/Types'
+import { PageType } from '../common/type/Types'
+import { 
+  SampleTextArea, 
+  SampleTextAreaProps,
+} from '../component/Sample'
 
 export const About = () => {
   /**
@@ -45,7 +47,7 @@ export const About = () => {
   }
 
   // コンポーネントへデータ渡し
-  const inputProps: InputType = {
+  const inputProps: SampleTextAreaProps = {
     text: 'hello',
     onClear: () => {
       console.log('onClear', inputProps.text)

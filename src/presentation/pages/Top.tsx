@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import '../../App.css'
-import { PageType } from '../common/Types'
+import { PageType } from '../common/type/Types'
 
 export const Top = () => {
   const data: PageType = {
@@ -22,6 +22,9 @@ export const Top = () => {
       {/* 普通の画面遷移 */}
       <div style={{margin: '8px'}}>
         <Link to='/about'>about</Link>
+      </div>
+      <div style={{margin: '8px'}}>
+        <Link to='/material'>material</Link>
       </div>
       
       {/* History画面遷移 */}

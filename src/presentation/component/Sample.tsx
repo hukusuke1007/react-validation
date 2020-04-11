@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../../logo.svg'
 import '../../App.css'
-import { InputType } from '../common/Types'
 
 export const AppSampleComponent = () => {
   return (
@@ -24,7 +23,11 @@ export const AppSampleComponent = () => {
   )
 }
 
-export const SampleTextArea = (props: InputType) => {
+export type SampleTextAreaProps = {
+  text: string,
+  onClear: () => void,
+}
+export const SampleTextArea = (props: SampleTextAreaProps) => {
   const [text, onTextChange] = useState(props.text)
   return (
     <div className="App">
