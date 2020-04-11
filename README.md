@@ -1,5 +1,24 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Check
+
+- [] リリースビルド
+- [] React hook
+- [] Router
+- [] ページ間、コンポーネント間の値渡し
+- [] Image
+- [] Redux（duckパターン）
+- [] Injection
+- [] マテリアルデザイン
+- [] ボタン、スイッチ
+- []フォーム、テキストフィールド
+- [] ナビゲーションドロワー
+- [] カレンダー
+- [] カルーセル
+- [] CSSでゴニョゴニョ
+- [] グラフ
+- [] Firebase連携
+
 ## Available Scripts
 
 In the project directory, you can run:
