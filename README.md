@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] Injection
 - [ ] マテリアルデザイン
 - [ ] ボタン、スイッチ
-- [ ]フォーム、テキストフィールド
+- [ ] フォーム、テキストフィールド
 - [ ] ナビゲーションドロワー
 - [ ] カレンダー
 - [ ] カルーセル
