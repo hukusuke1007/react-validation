@@ -2,10 +2,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Check
 
-- [ ] リリースビルド
-- [ ] React hook
-- [ ] Router
-- [ ] ページ間、コンポーネント間の値渡し
+- [x] リリースビルド
+- [x] Router
+- [x] ページ間、コンポーネント間の値渡し
+- [ ] ESLint
+- [x] React hook
 - [ ] Image
 - [ ] Redux（duckパターン）
 - [ ] Injection
@@ -18,6 +19,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] CSSでゴニョゴニョ
 - [ ] グラフ
 - [ ] Firebase連携
+- [ ] logger
+- [ ] test
 
 ## Available Scripts
 

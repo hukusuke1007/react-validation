@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import { Top } from './presentation/pages/Top'
+import { About } from './presentation/pages/About'
+import { User } from './presentation/pages/User'
+import { NotFound } from './presentation/pages/NotFound'
+import { ScrollTop } from './presentation/component/ScrollTop'
 
-function App() {
+const App = () => {
+  const isAuth = false
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <ScrollTop />
+      <Switch>
+        {/* リダイレクト */}
+        <Route path='/' exact>
+          {isAuth ? <Redirect to='/users/0001'/> : <Top />}
+        </Route>
+        <Route path='/about' children={<About />} />
+        <Route path="/users/:id" children={<User />} />
+        <Route path='*' children={<NotFound />} />
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
