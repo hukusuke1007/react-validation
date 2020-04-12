@@ -11,11 +11,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] マテリアルデザイン
 - [x] ボタン
 - [x] スイッチ
-- [ ] フォーム、テキストフィールド
-- [ ] アプリバー
+- [x] フォーム、テキストフィールド
+- [x] アプリバー
+- [x] ナビゲーションドロワー
+- [ ] カード
 - [ ] カレンダー
 - [ ] カルーセル
-- [ ] ナビゲーションドロワー
+- [ ] ダークモード
+- [ ] 多言語化
 - [x] CSSでゴニョゴニョ
 - [ ] Neumorphism
 - [ ] Injection

@@ -43,38 +43,40 @@ export const SwitchSample = () => {
     setState({ ...state, [event.target.name]: event.target.checked })
   }
   return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-    }}>
+    <div>
       {/* スイッチボタン */}
-      <FormGroup row>
-        <FormControlLabel
-          control={
-            <Switch 
-              size="medium"
-              checked={state.checkedA} 
-              onChange={handleChange} 
-              name="checkedA" 
-            />}
-          label="Secondary"
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              size="small"
-              checked={state.checkedB}
-              onChange={handleChange}
-              name="checkedB"
-              color="primary"
-            />
-          }
-          label="Primary"
-        />
-        <FormControlLabel control={<Switch />} label="Uncontrolled" />
-        <FormControlLabel disabled control={<Switch />} label="Disabled" />
-        <FormControlLabel disabled control={<Switch checked />} label="Disabled" />
-      </FormGroup>     
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+      }}>
+        <FormGroup row>
+          <FormControlLabel
+            control={
+              <Switch 
+                size="medium"
+                checked={state.checkedA} 
+                onChange={handleChange} 
+                name="checkedA" 
+              />}
+            label="Secondary"
+          />
+          <FormControlLabel
+            control={
+              <Switch
+                size="small"
+                checked={state.checkedB}
+                onChange={handleChange}
+                name="checkedB"
+                color="primary"
+              />
+            }
+            label="Primary"
+          />
+          <FormControlLabel control={<Switch />} label="Uncontrolled" />
+          <FormControlLabel disabled control={<Switch />} label="Disabled" />
+          <FormControlLabel disabled control={<Switch checked />} label="Disabled" />
+        </FormGroup>     
+      </div>
     </div>
   )
 }

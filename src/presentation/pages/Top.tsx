@@ -1,51 +1,23 @@
 import React from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../../App.css'
-import { PageType } from '../common/type/Types'
 
 export const Top = () => {
-  const data: PageType = {
-    id: 'xxxxxx',
-    age: 20,
-  }
-  const history = useHistory()
-
-  // useHistoryで画面遷移
-  const routerFunc = () => {
-    history.push('/about', data)
-  }
-
   return (
     <div className='App'>
       <h1>Topページ</h1>
-      
-      {/* 普通の画面遷移 */}
       <div style={{margin: '8px'}}>
-        <Link to='/about'>about</Link>
+        <Link to='/home'>home</Link>
       </div>
       <div style={{margin: '8px'}}>
         <Link to='/material'>material</Link>
       </div>
-      
-      {/* History画面遷移 */}
       <div style={{margin: '8px'}}>
-        <button 
-          type='button'
-          onClick={routerFunc}>
-          about from button
-        </button>
+        <Link to='/drawer_1'>drawer_1</Link>
       </div>
-
-      {/* パラメータ付き */}
       <div style={{margin: '8px'}}>
-        <Link to={{
-          pathname: '/about',
-          search: '?id=0000',
-          hash: '#hash',
-          state: data,
-        }}>about</Link>
+        <Link to='/drawer_2'>drawer_2</Link>
       </div>
-   
     </div>
   )
 }

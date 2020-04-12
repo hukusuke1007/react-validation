@@ -1,26 +1,58 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import { Top } from './presentation/pages/Top'
-import { About } from './presentation/pages/About'
-import { Material } from './presentation/pages/Material'
-import { User } from './presentation/pages/User'
+import { BrowserRouter, Switch, Route, Redirect, Link } from 'react-router-dom'
 import { NotFound } from './presentation/pages/NotFound'
 import { ScrollTop } from './presentation/component/ScrollTop'
+import topRoutes from './presentation/router/Top'
+import homeRoutes from './presentation/router/Home'
+import {
+  AppBar,
+  Toolbar,
+} from '@material-ui/core'
 
 const App = () => {
-  const isAuth = false
+  const isAuth = true
   return (
     <BrowserRouter>
-      <ScrollTop />
       <Switch>
-        {/* リダイレクト */}
-        <Route path='/' exact>
-          {isAuth ? <Redirect to='/users/0001'/> : <Top />}
+        {topRoutes.map((config, i) => (
+          <Route 
+            key={i} 
+            path={config.path}
+            exact={config.exact}
+            children={config.children}
+          />
+        ))}
+
+        {/* home配下でルーティング */}
+        {/* https://stackoverflow.com/questions/41474134/nested-routes-with-react-router-v4-v5/49321289#49321289 */}
+        <Route 
+          path='/home'  
+          render={({ match: { url } }) => 
+            (
+              <>
+              <AppBar position="static">
+                <Toolbar>
+                  AppBar
+                </Toolbar>
+              </AppBar>
+              <ScrollTop />
+              <Switch>
+                {homeRoutes.map((config, i) => (
+                  <Route 
+                    key={i}
+                    path={`${url}${config.path}`}
+                    exact={config.exact}
+                    children={isAuth ? config.children : <Redirect to={'/'}/>}
+                  />
+                ))}
+              </Switch>
+              </>
+            )
+          }>
         </Route>
-        <Route path='/about' children={<About />} />
-        <Route path='/material' children={<Material />} />
-        <Route path="/users/:id" children={<User />} />
-        <Route path='*' children={<NotFound />} />
+
+        {/* 404 */}
+        <Route path='*' component={NotFound} />
       </Switch>
     </BrowserRouter>
   )
