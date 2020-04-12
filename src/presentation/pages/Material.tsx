@@ -7,7 +7,7 @@ import { ButtonSample } from '../component/material/ButtonSample'
 import { GridListSample } from '../component/material/GridListSample'
 import { SwitchSample } from '../component/material/SwitchSample'
 import { TextSample } from '../component/material/TextSample'
-import { AppBarSample } from '../component/material/AppBarSample'
+import { CardSample } from '../component/material/CardSample'
 import { Link } from 'react-router-dom'
 
 /**
@@ -19,9 +19,7 @@ import { Link } from 'react-router-dom'
  */
 export const Material = () => {
   return (
-
     <div>
-      <AppBarSample />
       <div className='App'>
         <h1>Materialページ</h1>
         <div style={{margin: '8px'}}>
@@ -30,6 +28,7 @@ export const Material = () => {
         <div style={{margin: '8px'}}>
           <Link to='/drawer_2'>Drawer 2</Link>
         </div>
+        <CardSample />
         <TextSample />
         <SwitchSample />
         <BoxSample />

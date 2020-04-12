@@ -14,18 +14,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] フォーム、テキストフィールド
 - [x] アプリバー
 - [x] ナビゲーションドロワー
-- [ ] カード
-- [ ] カレンダー
-- [ ] カルーセル
+- [x] カード
 - [ ] ダークモード
 - [ ] 多言語化
-- [x] CSSでゴニョゴニョ
-- [ ] Neumorphism
 - [ ] Injection
+- [x] CSSでゴニョゴニョ
+- [ ] カルーセル
 - [ ] グラフ
+- [ ] カレンダー
+- [ ] Neumorphism
 - [ ] Firebase連携
 - [ ] Redux（duckパターン）
-- [ ] logger
+- [ ] Redux logger
 - [ ] test
 
 ## Available Scripts
