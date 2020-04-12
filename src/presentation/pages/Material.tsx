@@ -5,6 +5,7 @@ import { ContainerSample } from '../component/material/ContainerSample'
 import { GridSample } from '../component/material/GridSample'
 import { ButtonSample } from '../component/material/ButtonSample'
 import { GridListSample } from '../component/material/GridListSample'
+import { SwitchSample } from '../component/material/SwitchSample'
 
 /**
  * API
@@ -16,7 +17,8 @@ import { GridListSample } from '../component/material/GridListSample'
 export const Material = () => {
   return (
     <div className='App'>
-      <h1>Aboutページ</h1>
+      <h1>Materialページ</h1>
+      <SwitchSample />
       <BoxSample />
       <ContainerSample />
       <GridSample />

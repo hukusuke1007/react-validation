@@ -7,7 +7,13 @@ import {
 import { 
   Box,
   Button,
+  Icon,
 } from '@material-ui/core'
+import IconButton from '@material-ui/core/IconButton'
+import PhotoCamera from '@material-ui/icons/PhotoCamera'
+import DeleteIcon from '@material-ui/icons/Delete'
+import CloudUploadIcon from '@material-ui/icons/CloudUpload'
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   botton_root: {
@@ -22,12 +28,22 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   label: {
     textTransform: 'capitalize',
   },
+  input: {
+    display: 'none',
+  },
+  margin: {
+    margin: theme.spacing(1),
+  },
+  button: {
+    margin: theme.spacing(1),
+  },
 }))
 
 export const ButtonSample = () => {
   const classes = useStyles()
   return (
     <div>
+      {/* 様々なボタン */}
       <Box component="span" m={1}>
         <Button 
           variant="contained" 
@@ -50,6 +66,53 @@ export const ButtonSample = () => {
           Hello World
         </Button>
       </Box>
+      <Box component="div" m={1}>
+        <Button>Default</Button>
+        <Button color="primary">Primary</Button>
+        <Button disabled>Disabled</Button>
+        <Button href="#text-buttons" color="primary">
+          Link
+        </Button>
+        <Button variant="outlined" color="primary">
+          Primary
+        </Button>
+      </Box>
+
+      {/* カメラ */}
+      <div>
+        <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
+        <label htmlFor="icon-button-file">
+          <IconButton color="primary" aria-label="upload picture" component="span">
+            <PhotoCamera />
+          </IconButton>
+        </label>
+      </div>
+
+      {/* アイコン */}
+      <IconButton aria-label="delete" className={classes.margin} size="small">
+        <ArrowDownwardIcon fontSize="inherit" />
+      </IconButton>
+      <IconButton aria-label="delete" className={classes.margin} size="medium">
+        <DeleteIcon />
+      </IconButton>
+
+      {/* アイコンとテキストセットのボタン */}
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        endIcon={<Icon>send</Icon>}
+      >
+        Send
+      </Button>
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        startIcon={<CloudUploadIcon />}
+      >
+        Upload
+      </Button>
     </div>
   )
 }

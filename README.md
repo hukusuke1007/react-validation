@@ -7,18 +7,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] ページ間、コンポーネント間の値渡し
 - [ ] ESLint
 - [x] React hook
-- [ ] Image
-- [ ] Redux（duckパターン）
-- [ ] Injection
-- [ ] マテリアルデザイン
-- [ ] ボタン、スイッチ
+- [x] Image
+- [x] マテリアルデザイン
+- [x] ボタン
+- [x] スイッチ
 - [ ] フォーム、テキストフィールド
-- [ ] ナビゲーションドロワー
+- [ ] アプリバー
 - [ ] カレンダー
 - [ ] カルーセル
-- [ ] CSSでゴニョゴニョ
+- [ ] ナビゲーションドロワー
+- [x] CSSでゴニョゴニョ
+- [ ] Neumorphism
+- [ ] Injection
 - [ ] グラフ
 - [ ] Firebase連携
+- [ ] Redux（duckパターン）
 - [ ] logger
 - [ ] test
 
