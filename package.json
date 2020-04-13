@@ -28,8 +28,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "react-app-rewired build --scripts-version react-scripts",
+    "test": "react-app-rewired test --scripts-version react-scripts",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -46,5 +46,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-app-rewired": "^2.1.5",
+    "ts-loader": "^6.2.2"
   }
 }
