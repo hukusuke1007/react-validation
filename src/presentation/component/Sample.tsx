@@ -6,7 +6,21 @@ import {
   useTranslation,
   Trans,
 } from 'react-i18next'
+import { useTheme } from '../theme/ThemeContext'
 import '../../App.css'
+
+/**
+ * DarkMode
+ */
+export const DarkModeSample = () => {
+  const { colorMode, setColorMode } = useTheme()
+  return (
+    <div>
+      <p>current color mode: {colorMode}</p>
+      <button onClick={setColorMode}>toggle color mode</button>
+    </div>
+  )
+}
 
 /**
  * 多言語化

@@ -12,6 +12,16 @@ import {
   AppBar,
   Toolbar,
 } from '@material-ui/core'
+import Styled from './presentation/theme/Styled'
+
+/**
+ * DarkMode
+ */
+const Container = Styled.div`
+  height: 100%;
+  background: ${props => props.theme.background};
+  color: ${props => props.theme.color};
+`
 
 // Localized
 i18n.use(initReactI18next).init({
@@ -27,49 +37,51 @@ i18n.use(initReactI18next).init({
 const App = () => {
   const isAuth = true
   return (
-    <BrowserRouter>
-      <Switch>
-        {topRoutes.map((config, i) => (
+    <Container>
+      <BrowserRouter>
+        <Switch>
+          {topRoutes.map((config, i) => (
+            <Route 
+              key={i} 
+              path={config.path}
+              exact={config.exact}
+              children={config.children}
+            />
+          ))}
+
+          {/* home配下でルーティング */}
+          {/* https://stackoverflow.com/questions/41474134/nested-routes-with-react-router-v4-v5/49321289#49321289 */}
           <Route 
-            key={i} 
-            path={config.path}
-            exact={config.exact}
-            children={config.children}
-          />
-        ))}
+            path='/home'  
+            render={({ match: { url } }) => 
+              (
+                <>
+                <AppBar position="static">
+                  <Toolbar>
+                    AppBar
+                  </Toolbar>
+                </AppBar>
+                <ScrollTop />
+                <Switch>
+                  {homeRoutes.map((config, i) => (
+                    <Route 
+                      key={i}
+                      path={`${url}${config.path}`}
+                      exact={config.exact}
+                      children={isAuth ? config.children : <Redirect to={'/'}/>}
+                    />
+                  ))}
+                </Switch>
+                </>
+              )
+            }>
+          </Route>
 
-        {/* home配下でルーティング */}
-        {/* https://stackoverflow.com/questions/41474134/nested-routes-with-react-router-v4-v5/49321289#49321289 */}
-        <Route 
-          path='/home'  
-          render={({ match: { url } }) => 
-            (
-              <>
-              <AppBar position="static">
-                <Toolbar>
-                  AppBar
-                </Toolbar>
-              </AppBar>
-              <ScrollTop />
-              <Switch>
-                {homeRoutes.map((config, i) => (
-                  <Route 
-                    key={i}
-                    path={`${url}${config.path}`}
-                    exact={config.exact}
-                    children={isAuth ? config.children : <Redirect to={'/'}/>}
-                  />
-                ))}
-              </Switch>
-              </>
-            )
-          }>
-        </Route>
-
-        {/* 404 */}
-        <Route path='*' component={NotFound} />
-      </Switch>
-    </BrowserRouter>
+          {/* 404 */}
+          <Route path='*' component={NotFound} />
+        </Switch>
+      </BrowserRouter>
+    </Container>
   )
 }
 

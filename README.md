@@ -15,9 +15,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] アプリバー
 - [x] ナビゲーションドロワー
 - [x] カード
-- [ ] 多言語化
+- [x] 多言語化
+- [x] ダークモード
+- [x] emotion
 - [ ] Injection
-- [ ] ダークモード
 - [x] CSSでゴニョゴニョ
 - [ ] カルーセル
 - [ ] グラフ
