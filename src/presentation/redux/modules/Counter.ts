@@ -58,19 +58,18 @@ export default function reducer(state: State = initialState, action: Action) {
 export const useUpdateCount = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  
-  const dispatch = useDispatch<Dispatch<Action>>()
-  const { count } = useSelector<StoreState, State>(state => state.counter)
-
+  // presentaion
+  const { count } = useSelector<StoreState, State>(state => state.counter) 
+  const dispatch = useDispatch<Dispatch<Action>>()  
   const updateCount = useCallback(async () => {
     setLoading(true)
     try {
       const nextCount = await updateCountAsync(count)
       dispatch({ type: ActyonType.INCREMENT, count: nextCount })
     } catch (e) {
-      setLoading(false)
       setError(e.message)
     }
+    setLoading(false)
   }, [loading, error, count])
 
   return {

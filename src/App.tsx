@@ -14,6 +14,9 @@ import {
   Toolbar,
 } from '@material-ui/core'
 import Styled from './presentation/theme/Styled'
+// import { useSelector } from 'react-redux'
+// import { StoreState } from './presentation/redux/StoreState'
+// import { State } from './presentation/redux/modules/Counter'
 
 /**
  * DarkMode
@@ -37,6 +40,8 @@ i18n.use(initReactI18next).init({
 
 const App = () => {
   const isAuth = true
+  // const selector = useSelector<StoreState, State>(state => state.counter)
+  // console.log('App', selector.count)
   return (
     <Container>
       <BrowserRouter>

@@ -10,6 +10,8 @@ import {
   useUpdateCount,
 } from '../redux/modules/Counter'
 import { StoreState } from '../redux/StoreState'
+import container from '../../di_container/tsyringe.config'
+import { SampleUseCase } from '../../domain/use_case/SampleUseCase'
 
 // https://react-redux.js.org/api/hooks
 export const ReduxSample = () => {
@@ -37,7 +39,9 @@ export const ReduxSample = () => {
         <p>Counter: {count}</p>
         <button onClick={() => {
           console.log('Increment')
-          dispatch({ type: ActyonType.INCREMENT })
+          const useCase = container.resolve<SampleUseCase>('SampleUseCase')
+          useCase.increment(dispatch)
+          // dispatch({ type: ActyonType.INCREMENT })
         }}>
           Increment
         </button>
