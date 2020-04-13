@@ -20,8 +20,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] emotion
 - [x] injection
 - [x] CSSでゴニョゴニョ
-- [ ] Redux（duckパターン）
-- [ ] Redux logger
+- [x] Redux
+- [x] Redux logger
 - [ ] Firebase連携
 - [ ] Neumorphism
 - [ ] カルーセル
