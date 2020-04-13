@@ -8,6 +8,7 @@ import {
 import { EmotionSample } from '../component/EmotionSample'
 import container from '../../di_container/tsyringe.config'
 import { SampleUseCase } from '../../domain/use_case/SampleUseCase'
+import { ReduxSample } from '../component/ReduxSample'
 
 export const Top = () => {
   const loadSample = () => {
@@ -19,10 +20,17 @@ export const Top = () => {
   return (
     <div className='App'>
       <h1>Topページ</h1>
+      {/* Redux */}
+      <div style={{
+        marginBottom: '10px'
+      }}>
+        <ReduxSample />
+      </div>
+      {/* DI */}
       <div>
-      <button onClick={loadSample} >
-        loadSample
-      </button>
+        <button onClick={loadSample} >
+          loadSample
+        </button>
       </div>
       {/* Emotion */}
       <EmotionSample />

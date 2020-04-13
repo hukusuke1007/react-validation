@@ -5,6 +5,8 @@ import App from './App'
 import * as serviceWorker from './serviceWorker'
 import ThemeProvider from './presentation/theme/ThemeProvider'
 import { Global, css } from '@emotion/core'
+import { Provider } from 'react-redux'
+import store from './presentation/redux/Store'
 
 ReactDOM.render(
   // 
@@ -22,7 +24,9 @@ ReactDOM.render(
       `}
     />
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </ThemeProvider>,
   document.getElementById('root')
