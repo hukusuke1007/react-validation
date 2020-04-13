@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import React from 'react'
 import { BrowserRouter, Switch, Route, Redirect, } from 'react-router-dom'
 import i18n from 'i18next'

@@ -6,8 +6,16 @@ import {
   DarkModeSample, 
 } from '../component/Sample'
 import { EmotionSample } from '../component/EmotionSample'
+import container from '../../inversify.config'
+import { SampleUseCase } from '../../domain/use_case/SampleUseCase'
 
 export const Top = () => {
+  const loadSample = () => {
+    const useCase = container.get<SampleUseCase>('SampleUseCase')
+    const result = useCase.loadSample()
+    console.log('result', result)
+  }
+  loadSample()
   return (
     <div className='App'>
       <h1>Topページ</h1>

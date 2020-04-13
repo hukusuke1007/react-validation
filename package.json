@@ -17,11 +17,13 @@
     "@types/react-router-dom": "^5.1.4",
     "emotion-theming": "^10.0.27",
     "i18next": "^19.4.1",
+    "inversify": "^5.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-i18next": "^11.3.4",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
+    "reflect-metadata": "^0.1.13",
     "typescript": "~3.7.2"
   },
   "scripts": {
