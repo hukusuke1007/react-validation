@@ -34,27 +34,9 @@ https://react-validation-86b59.web.app/
 
 ## ORETEKI Procedure
 
-### Install library
-
 ```sh
-# Design
-# https://material-ui.com/ja/getting-started/installation/
-yarn add @material-ui/core @material-ui/icons @emotion/core emotion/styled 
-
-# Localized
-yarn add i18next react-i18next
-
-# DI
-yarn add tsyringe reflect-metadata
-yarn add ts-loader --dev
-
-# Firebase
-# T.B.D
-```
-
-### Run to eject
-
-```sh
+npx create-react-app app-name --typescript
+cd app-name
 yarn eject
 ```
 
@@ -78,6 +60,25 @@ To modify webpack.config.js to add ts-loader.
             },
             // ....
 ```
+
+### Install library
+
+```sh
+# Design
+# https://material-ui.com/ja/getting-started/installation/
+yarn add @material-ui/core @material-ui/icons @emotion/core emotion/styled 
+
+# Localized
+yarn add i18next react-i18next
+
+# DI
+yarn add tsyringe reflect-metadata
+yarn add ts-loader --dev
+
+# Firebase
+# T.B.D
+```
+
 
 ## Available Scripts
 
