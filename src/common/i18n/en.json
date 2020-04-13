@@ -1,0 +1,5 @@
+{
+  "title": "Welcome to React Validation",
+  "changeLang": "change language",
+  "hello": "Hello <1>{{name}}</1>"
+}

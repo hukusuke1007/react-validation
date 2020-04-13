@@ -1,32 +1,58 @@
-import React, { useState } from 'react'
-import logo from '../../logo.svg'
+import React, {   
+  useState,
+  useEffect, 
+} from 'react'
+import { 
+  useTranslation,
+  Trans,
+} from 'react-i18next'
 import '../../App.css'
 
-export const AppSampleComponent = () => {
+/**
+ * 多言語化
+ */
+export const LocalizedSample = () => {
+  const [t, i18n] = useTranslation()
+  const [lang, setLang] = useState('ja')
+  useEffect(() => {
+    i18n.changeLanguage(lang)
+  }, [lang, i18n])
+  const name = 'Shohei'
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>{t('title')}</p>
+      <p>
+        <Trans i18nKey='hello'>
+          {{name: 'Shohei'}}
+        </Trans>
+      </p>
+      <p>
+        <Trans i18nKey='hello'>
+         {{name}}
+        </Trans>
+      </p>
+      <p>
+        <Trans i18nKey='hello'>
+          Some newlines <strong>{{name}}</strong>
+        </Trans>
+      </p>
+      <button onClick={() => setLang(lang === 'en' ? 'ja' : 'en')}>
+        <p>{t('changeLang')}</p>
+      </button>
     </div>
-  )
+  )  
 }
 
+
+
+/**
+ * テキストエリア
+ */
 export type SampleTextAreaProps = {
   text: string,
   onClear: () => void,
 }
+
 export const SampleTextArea = (props: SampleTextAreaProps) => {
   const [text, onTextChange] = useState(props.text)
   return (

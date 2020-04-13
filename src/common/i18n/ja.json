@@ -1,0 +1,5 @@
+{
+  "title": "ようこそ React Validation",
+  "changeLang": "言語を切り替え",
+  "hello": "こんにちは <1>{{name}}</1>"
+}

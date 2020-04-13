@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../App.css'
+import { LocalizedSample } from '../component/Sample'
 
 export const Top = () => {
   return (
     <div className='App'>
       <h1>Topページ</h1>
+      {/* 多言語化 */}
+      <LocalizedSample />
+      {/* 画面遷移 */}
       <div style={{margin: '8px'}}>
         <Link to='/home'>home</Link>
       </div>
