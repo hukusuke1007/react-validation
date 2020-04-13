@@ -1,4 +1,5 @@
-import { injectable, inject } from 'inversify'
+// import { injectable, inject } from 'inversify'
+import { injectable, inject } from 'tsyringe'
 import { SampleRepository } from '../repository/SampleRepository'
 
 export interface SampleUseCase {
@@ -7,17 +8,12 @@ export interface SampleUseCase {
 
 @injectable()
 export class SampleUseCaseImpl implements SampleUseCase {
-  // private sampleRepository: SampleRepository
-
   constructor(
-    // @inject('SampleRepository') sampleRepository: SampleRepository,
-  ) {
-    // this.sampleRepository = sampleRepository
-  }
+    @inject('SampleRepository') private sampleRepository: SampleRepository
+  ) {}
 
   loadSample(): string {
-    return 'Hello'
-//    return this.sampleRepository.loadData()
+    return this.sampleRepository.loadData()
   }
 
 }

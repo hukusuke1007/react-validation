@@ -6,12 +6,12 @@ import {
   DarkModeSample, 
 } from '../component/Sample'
 import { EmotionSample } from '../component/EmotionSample'
-import container from '../../inversify.config'
+import container from '../../di_container/tsyringe.config'
 import { SampleUseCase } from '../../domain/use_case/SampleUseCase'
 
 export const Top = () => {
   const loadSample = () => {
-    const useCase = container.get<SampleUseCase>('SampleUseCase')
+    const useCase = container.resolve<SampleUseCase>('SampleUseCase')
     const result = useCase.loadSample()
     console.log('result', result)
   }
@@ -19,6 +19,11 @@ export const Top = () => {
   return (
     <div className='App'>
       <h1>Topページ</h1>
+      <div>
+      <button onClick={loadSample} >
+        loadSample
+      </button>
+      </div>
       {/* Emotion */}
       <EmotionSample />
       {/* DarkMode */}
