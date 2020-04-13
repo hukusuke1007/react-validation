@@ -7,10 +7,10 @@ import {
   CombinedState,
 } from 'redux'
 import logger from 'redux-logger'
-import { ReducerState } from './ReducerState'
+import { StoreState } from './StoreState'
 import counterReducer from './modules/Counter'
 
-const createStore = (): Store<CombinedState<ReducerState>, Action> => {
+const createStore = (): Store<CombinedState<StoreState>, Action> => {
   const store = reduxCreateStore(
     combineReducers({
       counter: counterReducer,
