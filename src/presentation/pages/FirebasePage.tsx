@@ -4,8 +4,10 @@ import React, {
   useState,
 } from 'react'
 import '../../App.css'
-import firebase from 'firebase/app'
-
+import { Batch, firestore } from '@1amageek/ballcap'
+import container from '../../di_container/tsyringe.config'
+import { SampleUseCase } from '../../domain/use_case/SampleUseCase'
+import Item from '../../domain/model/Item'
 
 export const FirebasePage = () => {
 
@@ -15,8 +17,7 @@ export const FirebasePage = () => {
 
   const writeData = async (text: string) => {
     try {
-      const db: firebase.firestore.Firestore = firebase.firestore()
-      const collection: firebase.firestore.CollectionReference = db.collection('version/1/memo')
+      const collection = firestore.collection('version/1/memo')
       const id: string = collection.doc().id
       await collection.doc(id).set({
         uid: id,
@@ -31,8 +32,7 @@ export const FirebasePage = () => {
 
   const readFirestore = async () => {
     try {
-      const db: firebase.firestore.Firestore = firebase.firestore()
-      const items: firebase.firestore.QuerySnapshot = await db.collection('version/1/memo').get()
+      const items = await firestore.collection('version/1/memo').get()
       items.docs.forEach((item: firebase.firestore.QueryDocumentSnapshot) => {
         if (item.exists) {
           const data = item.data()
@@ -59,15 +59,34 @@ export const FirebasePage = () => {
           }}
         />
       </div>
-      <button type='button' style={{margin: '8px',}} onClick={ async () => {
-        await writeData(text)
-        onTextChange('')
-      }}>
-        write
-      </button>
-      <button type='button' style={{margin: '8px',}} onClick={readFirestore}>
-        read
-      </button>
+      <div>
+        <button type='button' style={{margin: '8px',}} onClick={ async () => {
+          await writeData(text)
+          onTextChange('')
+        }}>
+          write
+        </button>
+        <button type='button' style={{margin: '8px',}} onClick={readFirestore}>
+          read
+        </button>
+      </div>
+      <div>
+        <button type='button' style={{margin: '8px',}} onClick={ async () => {
+          const useCase = container.resolve<SampleUseCase>('SampleUseCase')
+          await useCase.saveItem()
+        }}>
+          itemWrite
+        </button>
+        <button type='button' style={{margin: '8px',}} onClick={ async () => {
+          const useCase = container.resolve<SampleUseCase>('SampleUseCase')
+          const items = await useCase.loadItems()
+          items.forEach((d) => {
+            console.log(d)
+          })
+        }}>
+          itemRead
+        </button>
+      </div>
     </div>
   )
 }

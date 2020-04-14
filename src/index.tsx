@@ -8,6 +8,7 @@ import { Global, css } from '@emotion/core'
 import { Provider } from 'react-redux'
 import store from './presentation/redux/Store'
 import firebase from 'firebase/app'
+import * as Ballcap from '@1amageek/ballcap'
 import 'firebase/firestore'
 
 /* eslint-disable */
@@ -17,7 +18,7 @@ import { firebaseConfig } from './config/FirebaseConfig'
 
 console.log('process_env', process.env)
 /** Firebase */
-firebase.initializeApp(firebaseConfig)
+Ballcap.initialize(firebase.initializeApp(firebaseConfig))
 
 ReactDOM.render(
   // 
