@@ -2,6 +2,7 @@ import React from 'react'
 import { Home } from '../pages/Home'
 import { About } from '../pages/About'
 import { User } from '../pages/User'
+import { FirebasePage } from '../pages/FirebasePage'
 import { NotFound } from '../pages/NotFound'
 
 const routes = [
@@ -22,6 +23,13 @@ const routes = [
     children: <User />,
     exact: false,
     component: User,
+    redirect: true,
+  },
+  {
+    path: '/firebase_page',
+    children: <FirebasePage />,
+    exact: false,
+    component: FirebasePage,
     redirect: true,
   },
   {

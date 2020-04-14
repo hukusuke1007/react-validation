@@ -7,6 +7,17 @@ import ThemeProvider from './presentation/theme/ThemeProvider'
 import { Global, css } from '@emotion/core'
 import { Provider } from 'react-redux'
 import store from './presentation/redux/Store'
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+
+/* eslint-disable */
+require('dotenv').config()
+
+import { firebaseConfig } from './config/FirebaseConfig'
+
+console.log('process_env', process.env)
+/** Firebase */
+firebase.initializeApp(firebaseConfig)
 
 ReactDOM.render(
   // 

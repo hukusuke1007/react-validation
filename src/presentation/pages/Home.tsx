@@ -23,11 +23,15 @@ export const Home = () => {
       <h1>Homeページ</h1>
       
       <div style={{margin: '8px'}}>
-        <Link to={`${rootPath}/about`}>about</Link>
+        <Link to={`${rootPath}/firebase_page`}>FirebasePage</Link>
+      </div>
+
+      <div style={{margin: '8px'}}>
+        <Link to={`${rootPath}/about`}>About</Link>
       </div>
       
       <div style={{margin: '8px'}}>
-        <Link to={`${rootPath}/users/0001`}>user</Link>
+        <Link to={`${rootPath}/users/0001`}>User</Link>
       </div>
       
       {/* History画面遷移 */}
