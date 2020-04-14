@@ -1,24 +1,43 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './App'
-import * as serviceWorker from './serviceWorker'
-import ThemeProvider from './presentation/theme/ThemeProvider'
-import { Global, css } from '@emotion/core'
-import { Provider } from 'react-redux'
-import store from './presentation/redux/Store'
-import firebase from 'firebase/app'
-import * as Ballcap from '@1amageek/ballcap'
-import 'firebase/firestore'
-
 /* eslint-disable */
 require('dotenv').config()
 
+import App from './App'
+import * as serviceWorker from './serviceWorker'
+/** DarkMode */
+import ThemeProvider from './presentation/theme/ThemeProvider'
+import { Global, css } from '@emotion/core'
+/** Redux */
+import { Provider } from 'react-redux'
+import store from './Store'
+/** Localized */
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+import enJson from './common/i18n/en.json'
+import jaJson from './common/i18n/ja.json'
+/** Firebase */
+import firebase from 'firebase/app'
+import * as Ballcap from '@1amageek/ballcap'
+import 'firebase/firestore'
 import { firebaseConfig } from './config/FirebaseConfig'
 
 console.log('process_env', process.env)
 /** Firebase */
 Ballcap.initialize(firebase.initializeApp(firebaseConfig))
+
+// Localized
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: enJson, },
+    ja: { translation: jaJson, },
+  },
+  lng: 'ja',
+  fallbackLng: 'ja',
+  interpolation: { escapeValue: false },
+});
+
 
 ReactDOM.render(
   // 

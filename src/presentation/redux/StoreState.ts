@@ -1,5 +1,5 @@
 
-import * as Counter from './modules/Counter'
+import { Counter } from './modules'
 
 export type StoreState = {
   counter: Counter.State,

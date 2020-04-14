@@ -1,5 +1,15 @@
-import { Doc, Field } from '@1amageek/ballcap'
+import { 
+  Doc,
+  Field,
+  CollectionReference,
+  firestore
+} from '@1amageek/ballcap'
 
-export default class Item extends Doc {
+export class Item extends Doc {
+  static docName: string = 'item'
+  static collectionReference(): CollectionReference {
+		return firestore.collection('version').doc('1').collection(Item.docName)
+  }
+  
 	@Field name?: string
 }

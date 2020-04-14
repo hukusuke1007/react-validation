@@ -2,10 +2,10 @@ import { injectable, inject } from 'tsyringe'
 import { 
   Dispatch,
 } from 'redux'
-import { ActyonType, Action }from '../../presentation/redux/modules/Counter'
-import { SampleRepository } from '../repository/SampleRepository'
 import { Batch } from '@1amageek/ballcap'
-import Item from '../model/Item'
+import { ActyonType, Action }from '../../presentation/redux/modules/Counter'
+import { SampleRepository } from '../repository'
+import { Item } from '../model'
 
 export interface SampleUseCase {
   loadSample(): string 

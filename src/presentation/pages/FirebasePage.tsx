@@ -1,13 +1,11 @@
 import React, {
   useEffect, 
-  useRef, 
   useState,
 } from 'react'
 import '../../App.css'
-import { Batch, firestore } from '@1amageek/ballcap'
+import { firestore } from '@1amageek/ballcap'
 import container from '../../di_container/tsyringe.config'
-import { SampleUseCase } from '../../domain/use_case/SampleUseCase'
-import Item from '../../domain/model/Item'
+import { SampleUseCase } from '../../domain/use_case'
 
 export const FirebasePage = () => {
 

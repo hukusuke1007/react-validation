@@ -1,8 +1,8 @@
 import 'reflect-metadata'
 import { container } from 'tsyringe'
 
-import { SampleDataSource } from '../infrastructure/data_source/SampleDataSource'
-import { SampleUseCaseImpl } from '../domain/use_case/SampleUseCase'
+import { SampleDataSource } from '../infrastructure/data_source'
+import { SampleUseCaseImpl } from '../domain/use_case'
 /**
  * issue
  * https://github.com/microsoft/tsyringe/issues/70
