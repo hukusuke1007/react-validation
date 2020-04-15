@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-/* eslint-disable */
-require('dotenv').config()
 
 import App from './App'
 import * as serviceWorker from './serviceWorker'
@@ -23,7 +21,7 @@ import * as Ballcap from '@1amageek/ballcap'
 import 'firebase/firestore'
 import { firebaseConfig } from './config/FirebaseConfig'
 
-console.log('process_env', process.env)
+console.log('process_env', process.cwd(), process.env)
 /** Firebase */
 Ballcap.initialize(firebase.initializeApp(firebaseConfig))
 

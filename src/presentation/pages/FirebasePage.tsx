@@ -3,12 +3,20 @@ import React, {
   useState,
 } from 'react'
 import '../../App.css'
+import { 
+  useDispatch,
+} from 'react-redux'
+import { Dispatch } from 'redux'
+import { 
+  Item
+} from '../../domain/redux/modules'
 import { firestore } from '@1amageek/ballcap'
 import container from '../../di_container/tsyringe.config'
 import { SampleUseCase } from '../../domain/use_case'
 
 export const FirebasePage = () => {
 
+  const dispatch = useDispatch<Dispatch<Item.Action>>()
   useEffect(() => {
     console.log('mounted')
   }, [])
@@ -71,7 +79,7 @@ export const FirebasePage = () => {
       <div>
         <button type='button' style={{margin: '8px',}} onClick={ async () => {
           const useCase = container.resolve<SampleUseCase>('SampleUseCase')
-          await useCase.saveItem()
+          await useCase.saveItem(dispatch)
         }}>
           itemWrite
         </button>

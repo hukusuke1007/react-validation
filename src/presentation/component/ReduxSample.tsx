@@ -4,23 +4,19 @@ import {
   useDispatch,
 } from 'react-redux'
 import { Dispatch } from 'redux'
-import { 
-  Action,
-  ActyonType,
-  useUpdateCount,
-} from '../redux/modules/Counter'
-import { StoreState } from '../redux/StoreState'
+import * as modules from '../../domain/redux/modules'
 import container from '../../di_container/tsyringe.config'
 import { SampleUseCase } from '../../domain/use_case/SampleUseCase'
+import * as hooks from '../common/hooks'
 
 // https://react-redux.js.org/api/hooks
 export const ReduxSample = () => {
   /** 同期 */
-  // const selector = useSelector<StoreState, State>(state => state.counter)
-  const dispatch = useDispatch<Dispatch<Action>>()
+  // const selector = useSelector<StoreState, modules.Counter.State>(state => state.counter)
+  const dispatch = useDispatch<Dispatch<modules.Counter.Action>>()
 
   /** 非同期 */
-  const { count, updateCount, loading, error } = useUpdateCount()
+  const { count, updateCount, loading, error } = hooks.Counter.useUpdateCount()
   if (loading) {
     console.log('loading...')
   }
@@ -41,7 +37,6 @@ export const ReduxSample = () => {
           console.log('Increment')
           const useCase = container.resolve<SampleUseCase>('SampleUseCase')
           useCase.increment(dispatch)
-          // dispatch({ type: ActyonType.INCREMENT })
         }}>
           Increment
         </button>
@@ -53,7 +48,7 @@ export const ReduxSample = () => {
         </button>
         <button onClick={() => {
           console.log('Decrement')
-          dispatch({ type: ActyonType.DECREMENT })
+          dispatch({ type: modules.Counter.ActyonType.DECREMENT })
         }}>
           Decrement
         </button>

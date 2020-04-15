@@ -7,13 +7,17 @@ import {
   CombinedState,
 } from 'redux'
 import logger from 'redux-logger'
-import { StoreState } from './presentation/redux/StoreState'
-import { Counter } from './presentation/redux/modules'
+import { StoreState } from './domain/redux/StoreState'
+import { 
+  Counter,
+  Item
+} from './domain/redux/modules'
 
 const createStore = (): Store<CombinedState<StoreState>, Action> => {
   const store = reduxCreateStore(
     combineReducers({
       counter: Counter.default,
+      item: Item.default,
     }),
     applyMiddleware(
       logger,

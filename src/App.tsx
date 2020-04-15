@@ -9,12 +9,15 @@ import {
   AppBar,
   Toolbar,
 } from '@material-ui/core'
+import { 
+  shallowEqual,
+  useSelector,
+} from 'react-redux'
 import { DocumentData, QuerySnapshot } from '@1amageek/ballcap'
 import Styled from './presentation/theme/Styled'
 import { Item } from './domain/model'
-// import { useSelector } from 'react-redux'
-// import { StoreState } from './presentation/redux/StoreState'
-// import { State } from './presentation/redux/modules/Counter'
+import { StoreState } from './domain/redux/StoreState'
+import * as modules from './domain/redux/modules'
 
 /**
  * DarkMode
@@ -27,6 +30,11 @@ const Container = Styled.div`
 
 const App = () => {
   const isAuth = true
+  const selector = useSelector<StoreState, modules.Item.State>(
+    state => state.item, 
+    shallowEqual,
+  )
+  console.log('App', selector.item)
   useEffect(() => {
     Item.collectionReference()
       .limit(1)
@@ -40,8 +48,6 @@ const App = () => {
         }
       })
   }, [])
-  // const selector = useSelector<StoreState, State>(state => state.counter)
-  // console.log('App', selector.count)
   return (
     <Container>
       <BrowserRouter>

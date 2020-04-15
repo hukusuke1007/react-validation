@@ -1,2 +1,4 @@
 import * as Counter from './Counter'
-export { Counter }
+export {
+  Counter,
+}

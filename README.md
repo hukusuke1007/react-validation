@@ -23,7 +23,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Redux
 - [x] Redux logger
 - [x] Firebase連携
-- [ ] listener周り
+- [x] listener周り
 - [ ] Neumorphism
 - [ ] カルーセル
 - [ ] グラフ

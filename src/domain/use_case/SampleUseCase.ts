@@ -3,14 +3,14 @@ import {
   Dispatch,
 } from 'redux'
 import { Batch } from '@1amageek/ballcap'
-import { ActyonType, Action }from '../../presentation/redux/modules/Counter'
 import { SampleRepository } from '../repository'
 import { Item } from '../model'
+import * as modules from '../redux/modules'
 
 export interface SampleUseCase {
   loadSample(): string 
-  increment(dispatch: Dispatch<Action>): void
-  saveItem(): Promise<void>
+  increment(dispatch: Dispatch<modules.Counter.Action>): void
+  saveItem(dispatch: Dispatch<modules.Item.Action>): Promise<void>
   loadItems(): Promise<Item[]>
 }
 
@@ -24,16 +24,17 @@ export class SampleUseCaseImpl implements SampleUseCase {
     return this.sampleRepository.loadData()
   }
 
-  increment(dispatch: Dispatch<Action>) {
-    dispatch({ type: ActyonType.INCREMENT })
+  increment(dispatch: Dispatch<modules.Counter.Action>) {
+    dispatch({ type: modules.Counter.ActyonType.INCREMENT })
   }
 
-  async saveItem() {
+  async saveItem(dispatch: Dispatch<modules.Item.Action>) {
     const item = new Item()
     item.name = 'aaaa'
     let batch = new Batch()
     batch.save(item)
     await batch.commit()
+    dispatch({ type: modules.Item.ActyonType.SAVE, item: item })
   }
 
   async loadItems() {
