@@ -77,7 +77,14 @@ yarn add tsyringe reflect-metadata
 yarn add ts-loader --dev
 
 # Firebase
-# T.B.D
+yarn add firebase @1amageek/ballcap"
+```
+
+### dotenv
+
+```sh
+cp dotenvsample .development.env
+cp dotenvsample .production.env
 ```
 
 
