@@ -33,6 +33,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 https://react-validation-86b59.web.app/
 
+## How to use
+
+T.B.D
+
+
 ## ORETEKI Procedure
 
 ```sh

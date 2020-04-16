@@ -23,6 +23,7 @@ export const ReduxSample = () => {
   if (error) {
     console.error(error)
   }
+  console.log('ReduxSample')
   return (
     <div style={{
       display: 'inline',

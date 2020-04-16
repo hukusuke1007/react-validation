@@ -3,6 +3,7 @@ import { Home } from '../pages/Home'
 import { About } from '../pages/About'
 import { User } from '../pages/User'
 import { FirebasePage } from '../pages/FirebasePage'
+import { Neumorphism } from '../pages/Neumorphism'
 import { NotFound } from '../pages/NotFound'
 
 const routes = [
@@ -30,6 +31,13 @@ const routes = [
     children: <FirebasePage />,
     exact: false,
     component: FirebasePage,
+    redirect: true,
+  },
+  {
+    path: '/neumorphism',
+    children: <Neumorphism />,
+    exact: false,
+    component: Neumorphism,
     redirect: true,
   },
   {

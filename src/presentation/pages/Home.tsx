@@ -23,6 +23,10 @@ export const Home = () => {
       <h1>Homeページ</h1>
       
       <div style={{margin: '8px'}}>
+        <Link to={`${rootPath}/neumorphism`}>Neumorphism</Link>
+      </div>
+
+      <div style={{margin: '8px'}}>
         <Link to={`${rootPath}/firebase_page`}>FirebasePage</Link>
       </div>
 

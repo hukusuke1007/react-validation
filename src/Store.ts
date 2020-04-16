@@ -8,16 +8,13 @@ import {
 } from 'redux'
 import logger from 'redux-logger'
 import { StoreState } from './domain/redux/StoreState'
-import { 
-  Counter,
-  Item
-} from './domain/redux/modules'
+import * as modules from './domain/redux/modules'
 
 const createStore = (): Store<CombinedState<StoreState>, Action> => {
   const store = reduxCreateStore(
     combineReducers({
-      counter: Counter.default,
-      item: Item.default,
+      counter: modules.Counter.default,
+      item: modules.Item.default,
     }),
     applyMiddleware(
       logger,
@@ -26,5 +23,4 @@ const createStore = (): Store<CombinedState<StoreState>, Action> => {
   return store
 }
 
-const store = createStore()
-export default store
+export default createStore()
