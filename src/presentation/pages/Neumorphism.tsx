@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useCallback } from 'react'
 import '../../App.css'
-import { SampleButton } from '../element/Button'
+import * as element from '../element'
 
 /**
  *  White 
@@ -25,6 +25,11 @@ import { SampleButton } from '../element/Button'
  * Avatar
  * Driver
  */
+
+const style = {
+  margin: '8px'
+}
+
 export const Neumorphism = () => {
   return (
     <div className='App'>
@@ -32,15 +37,37 @@ export const Neumorphism = () => {
       {/* Neumorphism */}
       <div style={{
         padding: 16,
+        display: 'flex',
+        justifyContent: 'center',
       }}>
-        <SampleButton 
-          style={{
-            width: 120
-          }}
-          onClick={(e) => console.log(e)} 
-        >
-          Button
-        </SampleButton>
+        <element.Div.SampleDiv style={{
+          width: '90%',
+          height: 300,
+        }}>
+          <div style={style}>
+            <element.Button.SampleButton 
+              style={{
+                width: 120
+              }}
+              onClick={(e) => console.log(e)} 
+            >
+              Button
+            </element.Button.SampleButton>
+          </div>
+          <div style={style}>
+            <element.Button.SampleCircleButton onClick={(e) => console.log(e)} >
+              ！
+            </element.Button.SampleCircleButton>
+          </div>
+          <div style={style}>
+            <element.Input.SampleInput
+              placeholder='Aa'
+              onChange={(e) => {
+                console.log(e)
+              }}
+            />
+          </div>
+        </element.Div.SampleDiv>
       </div>
     </div>
   )
