@@ -35,10 +35,23 @@ https://react-validation-86b59.web.app/
 
 ## How to use
 
-T.B.D
+```sh
+git clone https://github.com/hukusuke1007/react-validation.git
+cd react-validation
+yarn
+
+# To setting dotenv. Make sure you add firebase apy key to env files.
+cp dotenvsample .development.env
+cp dotenvsample .production.env
+
+# run
+yarn start
+```
 
 
 ## ORETEKI Procedure
+
+俺以外見なくて良い。
 
 ```sh
 npx create-react-app app-name --typescript
@@ -92,6 +105,41 @@ cp dotenvsample .development.env
 cp dotenvsample .production.env
 ```
 
+### tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "es6",
+      "es2016"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": false,
+    "jsx": "react",
+    "types": ["jest", "reflect-metadata"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+  },
+  "include": [
+    "src"
+  ]
+}
+
+```
 
 ## Available Scripts
 

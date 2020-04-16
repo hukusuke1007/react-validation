@@ -7,17 +7,17 @@ const Button = Styled.button`
   padding: 8px;
   border-radius: 50px;
   background: #ffffff;
-  outline: 0;
   box-shadow:  20px 20px 60px #d9d9d9, 
                -20px -20px 60px #ffffff;
   font-size: 20px;
+
   // buttonの要素無効
   border: none;
   cursor: pointer;
   outline: none;
   appearance: none;
 
-  // カーソル時
+  // カーソルフォーカス時
   &:hover {
     
   }
