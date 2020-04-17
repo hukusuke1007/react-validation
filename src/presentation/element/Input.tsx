@@ -2,15 +2,16 @@ import React from 'react'
 import Styled from '../theme/Styled'
 import '../../App.css'
 
+const backgroundColor = '#DEE2EB'
 // https://neumorphism.io/#ffffff
 const Input = Styled.input`
   padding: 8px 16px;
   font-size: 16px;
 
   border-radius: 32px;
-  background: #ffffff;
-  box-shadow: inset 5px 5px 10px #dbdbdb, 
-  inset -5px -5px 10px #ffffff;
+  background: ${backgroundColor};
+  box-shadow: inset 2px 2px 5px #babecc, inset -4px -4px 5px #ffffff;
+  transition: .5s;
 
   border: none;
   outline: none;
@@ -18,10 +19,11 @@ const Input = Styled.input`
   ::placeholder {
     color: #848484;
   }
+
   // フォーカス時
   &:focus {
-    // border: 1px solid #ffffff; 
-    // z-index: 10;
+    box-shadow: inset 1px 1px 1px #babecc, inset -1px -1px 1px #ffffff;
+    transition: .5s;
   }
 `
 

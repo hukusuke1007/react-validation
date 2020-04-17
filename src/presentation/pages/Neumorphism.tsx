@@ -27,12 +27,19 @@ import * as element from '../element'
  */
 
 const style = {
-  margin: '8px'
+  margin: '32px'
 }
 
 export const Neumorphism = () => {
   return (
-    <div className='App'>
+    <element.Div.SampleDiv
+      style={{
+        borderRadius: '0px',
+        textAlign: 'center',
+        height: '100%',
+        width: '100%',
+      }}
+    >
       <h1>Neumorphismページ</h1>
       {/* Neumorphism */}
       <div style={{
@@ -42,7 +49,7 @@ export const Neumorphism = () => {
       }}>
         <element.Div.SampleDiv style={{
           width: '90%',
-          height: 300,
+          height: '100%',
         }}>
           <div style={style}>
             <element.Button.SampleButton 
@@ -69,6 +76,6 @@ export const Neumorphism = () => {
           </div>
         </element.Div.SampleDiv>
       </div>
-    </div>
+    </element.Div.SampleDiv>
   )
 }

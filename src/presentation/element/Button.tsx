@@ -4,13 +4,24 @@ import '../../App.css'
 
 // https://neumorphism.io/#ffffff
 
-/** Button */
+const backgroundColor = '#DEE2EB'
+
+/** 
+ * Button
+ * inset 0 0 15px rgba(217, 217, 217, 0) は transition反映させるために必要
+ * */
 const Button = Styled.button`
   padding: 8px;
   border-radius: 50px;
-  background: #ffffff;
-  box-shadow:  20px 20px 60px #d9d9d9, 
-               -20px -20px 60px #ffffff;
+  background: ${backgroundColor};
+
+  box-shadow: 
+  inset 0 0 15px rgba(217, 217, 217, 0),
+  inset 0 0 20px rgba(255, 255, 255, 0),
+  7px 7px 15px rgba(55, 84, 170, .15),
+  -7px -7px 20px rgba(255, 255, 255, 1),
+  inset 0px 0px 4px rgba(255, 255, 255, .2);
+
   font-size: 20px;
 
   // buttonの要素無効
@@ -21,15 +32,22 @@ const Button = Styled.button`
 
   // カーソルが触れた時
   &:hover {
-    
+    box-shadow: 
+    inset 0 0 15px rgba(217, 217, 217, 0),
+    inset 0 0 20px rgba(255, 255, 255, 0),
+    3px 3px 4px rgba(55, 84, 170, .15),
+    -1px -1px 4px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, .2);
   }
 
   // 押下時
   &:active {
-    color: transparent;
-    box-shadow: inset 12px 12px 24px #d9d9d9, 
-                inset -12px -12px 24px #ffffff;
+    box-shadow:
+    inset 3px 3px 1px rgba(217, 217, 217, 1),
+    inset -1px -1px 1px rgba(255, 255, 255, 1);
   }
+
+  transition: .5s;
 `
 type Prop = {
   style?: React.CSSProperties,
@@ -51,9 +69,14 @@ const CircleButton = Styled.button`
   width: 60px;
   height: 60px;
   border-radius: 50px;
-  background: #ffffff;
-  box-shadow:  20px 20px 60px #d9d9d9, 
-               -20px -20px 60px #ffffff;
+  background: ${backgroundColor};
+  box-shadow: 
+  inset 0 0 15px rgba(217, 217, 217, 0),
+  inset 0 0 20px rgba(255, 255, 255, 0),
+  7px 7px 15px rgba(55, 84, 170, .15),
+  -7px -7px 20px rgba(255, 255, 255, 1),
+  inset 0px 0px 4px rgba(255, 255, 255, .2);
+
   font-size: 20px;
 
   // buttonの要素無効
@@ -64,15 +87,22 @@ const CircleButton = Styled.button`
 
   // カーソルが触れた時
   &:hover {
-    
+    box-shadow: 
+    inset 0 0 15px rgba(217, 217, 217, 0),
+    inset 0 0 20px rgba(255, 255, 255, 0),
+    3px 3px 4px rgba(55, 84, 170, .15),
+    -1px -1px 4px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, .2);
   }
 
   // 押下時
   &:active {
-    color: transparent;
-    box-shadow: inset 12px 12px 24px #d9d9d9, 
-                inset -12px -12px 24px #ffffff;
+    box-shadow:
+    inset 3px 3px 1px rgba(217, 217, 217, 1),
+    inset -1px -1px 1px rgba(255, 255, 255, 1);
   }
+
+  transition: .5s;
 `
 export const SampleCircleButton: React.FC<Prop> = ({ children, style, onClick }, ) => {
   return (

@@ -2,13 +2,14 @@ import React from 'react'
 import Styled from '../theme/Styled'
 import '../../App.css'
 
+const backgroundColor = '#DEE2EB'
+
 // https://neumorphism.io/#ffffff
 const Div = Styled.div`
   padding: 8px;
   border-radius: 50px;
-  background: #ffffff;
-  box-shadow:  20px 20px 60px #d9d9d9, 
-               -20px -20px 60px #ffffff;
+  background: ${backgroundColor};
+  box-shadow: -3px -2px 4px rgba(255,255,255, .7), 3px 2px 4px rgba(55, 84, 170, .15);
 `
 
 type Prop = {
