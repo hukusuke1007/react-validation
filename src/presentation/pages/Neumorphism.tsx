@@ -1,7 +1,8 @@
-import React, { useEffect, useCallback } from 'react'
+import React from 'react'
 import '../../App.css'
 import * as element from '../element'
 import { DarkModeSample } from '../component/Sample'
+import DeleteIcon from '@material-ui/icons/Delete'
 
 /**
  *  White 
@@ -49,6 +50,9 @@ export const Neumorphism = () => {
           height: '100%',
         }}>
           <div style={style}>
+            <element.Divider.SampleDivider /> 
+          </div>
+          <div style={style}>
             <element.Button.SampleButton 
               style={{
                 width: 120
@@ -76,6 +80,17 @@ export const Neumorphism = () => {
               onClick={(e) => {
                 console.log(e)
               }}/>
+          </div>
+          <div style={style}>
+            <element.CheckButton.SampleCheckButton 
+              onClick={(e) => {
+                console.log(e)
+              }}>
+                
+              </element.CheckButton.SampleCheckButton>
+          </div>
+          <div style={style}>
+            <element.Divider.SampleDivider /> 
           </div>
         </element.Div.SampleDiv>
       </div>

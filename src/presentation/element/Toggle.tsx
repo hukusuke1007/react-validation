@@ -106,7 +106,7 @@ export const SampleToggle: React.FC<Prop> = ({ isCheck, onClick }, ) => {
     }}>
       <Input type='checkbox' checked={isCheck} onClick={onClick}/>
       <Label />
-        <span></span>
+      <span></span>
     </div> 
   )
 }

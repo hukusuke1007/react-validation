@@ -4,6 +4,7 @@ import * as Input from './Input'
 import * as Container from './Container'
 import * as Divider from './Divider'
 import * as Toggle from './Toggle'
+import * as CheckButton from './CheckButton'
 export {
   Button,
   Div,
@@ -11,4 +12,5 @@ export {
   Container,
   Divider,
   Toggle,
+  CheckButton,
 }
