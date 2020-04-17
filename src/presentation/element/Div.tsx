@@ -7,7 +7,7 @@ import '../../App.css'
  * 4C4E5A rgba(76, 78, 90)
  */
 const lightBgColor = '#DEE2EB'
-const darkBgColor1 = 'rgba(4, 5, 7)'
+const darkBgColor = '#040507' // rgba(4, 5, 7)
 const blackColor = '#000'
 const lightShadowColor1 = 'rgba(255,255,255, .7)'
 const lightShadowColor2 = 'rgba(55, 84, 170, .15)'
@@ -20,7 +20,7 @@ const Div = Styled.div`
   background: ${props => 
     props.theme.mode === 'light' 
       ? lightBgColor 
-      : `linear-gradient(180deg, ${darkShadowColor2}, rgba(4, 5, 7, .5), ${darkBgColor1})`
+      : `linear-gradient(180deg, ${darkShadowColor2}, ${darkShadowColor1}, ${darkBgColor})`
   };
   
   box-shadow: ${props => 
