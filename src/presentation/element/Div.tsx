@@ -1,11 +1,7 @@
 import React from 'react'
 import Styled from '../theme/Styled'
 import '../../App.css'
-/**
- * 
- * 040507	rgba(4, 5, 7)
- * 4C4E5A rgba(76, 78, 90)
- */
+
 const lightBgColor = '#DEE2EB'
 const darkBgColor = '#040507' // rgba(4, 5, 7)
 const blackColor = '#000'

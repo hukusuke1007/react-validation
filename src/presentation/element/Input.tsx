@@ -5,7 +5,6 @@ import '../../App.css'
 const lightBgColor = '#DEE2EB'
 const darkBgColor = '#040507' // rgba(4, 5, 7)
 
-// https://neumorphism.io/#ffffff
 const Input = Styled.input`
   padding: 8px 16px;
   font-size: 16px;
@@ -66,6 +65,7 @@ const inputType = {
   reset: 'reset',
   button: 'button',
   image: 'image',
+  toggle: 'toggle',
 };
 
 type Prop = {

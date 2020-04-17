@@ -72,7 +72,10 @@ export const Neumorphism = () => {
             />
           </div>
           <div style={style}>
-            <element.Divider.SampleDivider />
+            <element.Toggle.SampleToggle 
+              onClick={(e) => {
+                console.log(e)
+              }}/>
           </div>
         </element.Div.SampleDiv>
       </div>
