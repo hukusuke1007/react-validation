@@ -3,18 +3,19 @@ import Styled from '../theme/Styled'
 import '../../App.css'
 
 const backgroundColor = '#DEE2EB'
+
 // https://neumorphism.io/#ffffff
 const Input = Styled.input`
   padding: 8px 16px;
   font-size: 16px;
 
   border-radius: 32px;
-  background: ${backgroundColor};
+  background-color: ${backgroundColor};
   box-shadow: inset 2px 2px 5px #babecc, inset -4px -4px 5px #ffffff;
-  transition: .5s;
 
   border: none;
   outline: none;
+  -webkit-appearance: none;
 
   ::placeholder {
     color: #848484;
@@ -23,8 +24,9 @@ const Input = Styled.input`
   // フォーカス時
   &:focus {
     box-shadow: inset 1px 1px 1px #babecc, inset -1px -1px 1px #ffffff;
-    transition: .5s;
   }
+
+  transition: .5s;
 `
 
 const inputType = {

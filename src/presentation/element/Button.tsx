@@ -13,7 +13,7 @@ const backgroundColor = '#DEE2EB'
 const Button = Styled.button`
   padding: 8px;
   border-radius: 50px;
-  background: ${backgroundColor};
+  background-color: ${backgroundColor};
 
   box-shadow: 
   inset 0 0 15px rgba(217, 217, 217, 0),
@@ -43,8 +43,12 @@ const Button = Styled.button`
   // 押下時
   &:active {
     box-shadow:
-    inset 3px 3px 1px rgba(217, 217, 217, 1),
-    inset -1px -1px 1px rgba(255, 255, 255, 1);
+    inset 7px 7px 15px rgba(55, 84, 170,.15),
+    inset -7px -7px 20px rgba(255, 255, 255,1),
+    0px 0px 4px rgba(255, 255, 255, .2);
+    // box-shadow:
+    // inset 3px 3px 1px rgba(217, 217, 217, 1),
+    // inset -1px -1px 1px rgba(255, 255, 255, 1);
   }
 
   transition: .5s;
@@ -69,7 +73,7 @@ const CircleButton = Styled.button`
   width: 60px;
   height: 60px;
   border-radius: 50px;
-  background: ${backgroundColor};
+  background-color: ${backgroundColor};
   box-shadow: 
   inset 0 0 15px rgba(217, 217, 217, 0),
   inset 0 0 20px rgba(255, 255, 255, 0),
@@ -84,6 +88,7 @@ const CircleButton = Styled.button`
   cursor: pointer;
   outline: none;
   appearance: none;
+  -webkit-appearance: none;
 
   // カーソルが触れた時
   &:hover {
@@ -98,8 +103,12 @@ const CircleButton = Styled.button`
   // 押下時
   &:active {
     box-shadow:
-    inset 3px 3px 1px rgba(217, 217, 217, 1),
-    inset -1px -1px 1px rgba(255, 255, 255, 1);
+    inset 7px 7px 15px rgba(55, 84, 170,.15),
+    inset -7px -7px 20px rgba(255, 255, 255,1),
+    0px 0px 4px rgba(255, 255, 255, .2);
+    // box-shadow:
+    // inset 3px 3px 1px rgba(217, 217, 217, 1),
+    // inset -1px -1px 1px rgba(255, 255, 255, 1);
   }
 
   transition: .5s;

@@ -5,21 +5,26 @@ import '../../App.css'
 const backgroundColor = '#DEE2EB'
 
 // https://neumorphism.io/#ffffff
-const Div = Styled.div`
-  padding: 8px;
+const Hr = Styled.hr`
+  height: 2px;
+
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+
   border-radius: 50px;
   background-color: ${backgroundColor};
-  box-shadow: -3px -2px 4px rgba(255,255,255, .7), 3px 2px 4px rgba(55, 84, 170, .15);
+  box-shadow: inset 1px 1px 1px #babecc, inset -1px -1px 1px #ffffff;
 `
 
 type Prop = {
   style?: React.CSSProperties,
 }
 
-export const SampleDiv: React.FC<Prop> = ({ children, style, }, ) => {
+export const SampleDivider: React.FC<Prop> = ({ children, style, }, ) => {
   return (
-    <Div style={style}>
+    <Hr style={style}>
       {children}
-    </Div>
+    </Hr>
   )
 }

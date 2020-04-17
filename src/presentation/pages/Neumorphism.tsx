@@ -32,12 +32,9 @@ const style = {
 
 export const Neumorphism = () => {
   return (
-    <element.Div.SampleDiv
+    <element.Container.SampleContainer
       style={{
-        borderRadius: '0px',
         textAlign: 'center',
-        height: '100%',
-        width: '100%',
       }}
     >
       <h1>Neumorphismページ</h1>
@@ -74,8 +71,11 @@ export const Neumorphism = () => {
               }}
             />
           </div>
+          <div style={style}>
+            <element.Divider.SampleDivider />
+          </div>
         </element.Div.SampleDiv>
       </div>
-    </element.Div.SampleDiv>
+    </element.Container.SampleContainer>
   )
 }
