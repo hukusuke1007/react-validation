@@ -22,7 +22,7 @@ const Div = Styled.div`
   box-shadow: ${props => 
     props.theme.mode === 'light' 
       ? `-3px -2px 4px ${lightShadowColor1}, 3px 2px 4px ${lightShadowColor2}` 
-      : `-1px -1px 1px ${darkShadowColor1}, 10px 10px 20px ${blackColor}`
+      : `-1px -1px 1px ${darkShadowColor1}, 3px 3px 10px ${blackColor}`
   };
 `
 

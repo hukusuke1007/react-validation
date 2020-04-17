@@ -19,7 +19,11 @@ export const Top = () => {
   loadSample()
   return (
     <div className='App'>
-      <h1>Topページ</h1>
+      <div style={{
+        padding: 4,
+      }}>
+        <h1>Topページ</h1>
+      </div>
       {/* Redux */}
       <div style={{
         marginBottom: '10px'

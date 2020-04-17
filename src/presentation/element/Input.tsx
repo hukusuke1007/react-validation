@@ -6,9 +6,10 @@ const lightBgColor = '#DEE2EB'
 const darkBgColor = '#040507' // rgba(4, 5, 7)
 
 const Input = Styled.input`
+  width: 100%;
   padding: 8px 16px;
   font-size: 16px;
-
+  
   border-radius: 32px;
   background: ${props => props.theme.mode === 'light' ? lightBgColor : darkBgColor};
   color: ${props => props.theme.mode === 'light' ? `rgba(0, 0, 0, .8)` : `rgba(255, 255, 255, .8)`};

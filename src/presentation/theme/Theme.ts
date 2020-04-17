@@ -4,13 +4,13 @@ import {
  } from './Types'
 
 export const lightTheme: Theme = {
-  background: '#ffffff',
+  background: '#DEE2EB',
   color: '#000000',
   mode: 'light',
 }
 
 export const darkTheme: Theme = {
-  background: '#222639',
+  background: '#040507',
   color: '#f0f5fa',
   mode: 'dark',
 }

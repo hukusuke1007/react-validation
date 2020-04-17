@@ -19,8 +19,6 @@ import DeleteIcon from '@material-ui/icons/Delete'
  * https://dribbble.com/shots/10494263-Skeuomorph-Smart-Home-App
  * https://dribbble.com/shots/10135483-Music-App-Neumorphism
  * 
- * RadioButton
- * Switch
  * Avatar
  */
 
@@ -67,7 +65,11 @@ export const Neumorphism = () => {
               ！
             </element.Button.SampleCircleButton>
           </div>
-          <div style={style}>
+          <div style={{
+            margin: 'auto',
+            display: 'flex',
+            width: '260px',
+          }}>
             <element.Input.SampleInput
               placeholder='Aa'
               onChange={(e) => {
@@ -86,7 +88,8 @@ export const Neumorphism = () => {
               onClick={(e) => {
                 console.log(e)
               }}>
-                
+                {/* https://material-ui.com/components/material-icons/ */}
+                <i className='material-icons'>power_settings_new</i>
               </element.CheckButton.SampleCheckButton>
           </div>
           <div style={style}>

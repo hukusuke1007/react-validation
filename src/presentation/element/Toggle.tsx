@@ -40,8 +40,13 @@ const Input = Styled.input`
 `
 
 const Label = Styled.label`
+  position: relative;
+  display: inline-block;
   width: 75px;
   height: 42px;
+  border-radius: 46px;
+  box-sizing: border-box;
+
   box-shadow: ${props => 
     props.theme.mode === 'light' 
       ? // light
@@ -55,11 +60,8 @@ const Label = Styled.label`
       0px 0px 4px rgba(76, 78, 90, .2)
       ` 
   };
-  position: relative;
-  display: inline-block;
-  border-radius: 46px;
+
   transition: .4s;
-  box-sizing: border-box;
   &:after {
     content: '';
     position: absolute;

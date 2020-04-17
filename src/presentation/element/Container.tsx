@@ -2,12 +2,8 @@ import React from 'react'
 import Styled from '../theme/Styled'
 import '../../App.css'
 
-const lightBgColor = '#DEE2EB'
-const darkBgColor = '#040507' // rgba(4, 5, 7)
-
 const Div = Styled.div`
-  padding: 8px;
-  background: ${props => props.theme.mode === 'light' ? lightBgColor : darkBgColor};
+  background: ${props => props.theme.background};
   height: 100%;
 `
 

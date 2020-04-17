@@ -21,7 +21,11 @@ export const Material = () => {
   return (
     <div>
       <div className='App'>
-        <h1>Materialページ</h1>
+        <div style={{
+          padding: 4,
+        }}>
+          <h1>Materialページ</h1>
+        </div>
         <div style={{margin: '8px'}}>
           <Link to='/drawer_1'>Drawer 1</Link>
         </div>
