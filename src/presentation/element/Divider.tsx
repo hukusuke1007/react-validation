@@ -7,7 +7,7 @@ const backgroundColor = '#DEE2EB'
 // https://neumorphism.io/#ffffff
 const Hr = Styled.hr`
   height: 2px;
-
+  
   border: none;
   outline: none;
   -webkit-appearance: none;

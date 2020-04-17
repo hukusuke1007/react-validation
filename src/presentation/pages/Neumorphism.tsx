@@ -1,6 +1,7 @@
 import React, { useEffect, useCallback } from 'react'
 import '../../App.css'
 import * as element from '../element'
+import { DarkModeSample } from '../component/Sample'
 
 /**
  *  White 
@@ -17,13 +18,9 @@ import * as element from '../element'
  * https://dribbble.com/shots/10494263-Skeuomorph-Smart-Home-App
  * https://dribbble.com/shots/10135483-Music-App-Neumorphism
  * 
- * Div
- * Button, CircleButton
- * Input
  * RadioButton
  * Switch
  * Avatar
- * Driver
  */
 
 const style = {
@@ -38,6 +35,9 @@ export const Neumorphism = () => {
       }}
     >
       <h1>Neumorphismページ</h1>
+       {/* DarkMode */}
+      <DarkModeSample />
+
       {/* Neumorphism */}
       <div style={{
         padding: 16,

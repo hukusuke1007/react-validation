@@ -7,7 +7,7 @@ import {
  } from './Types'
 
 const ThemeProvider: React.FC = ({ children }) => {
-  const [colorMode, setColorMode] = useState<ColorMode>('light')
+  const [colorMode, setColorMode] = useState<ColorMode>('dark')
 
   function toggleColorMode() {
     setColorMode(colorMode === 'light' ? 'dark' : 'light')

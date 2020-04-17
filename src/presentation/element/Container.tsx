@@ -2,12 +2,13 @@ import React from 'react'
 import Styled from '../theme/Styled'
 import '../../App.css'
 
-const backgroundColor = '#DEE2EB'
+const lightBgColor = '#DEE2EB'
+const darkBgColor = '#040507'
 
 // https://neumorphism.io/#ffffff
 const Div = Styled.div`
   padding: 8px;
-  background-color: ${backgroundColor};
+  background-color: ${props => props.theme.mode === 'light' ? lightBgColor : darkBgColor};
   height: 100%;
 `
 

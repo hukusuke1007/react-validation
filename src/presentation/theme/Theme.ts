@@ -6,11 +6,13 @@ import {
 export const lightTheme: Theme = {
   background: '#ffffff',
   color: '#000000',
+  mode: 'light',
 }
 
 export const darkTheme: Theme = {
   background: '#222639',
   color: '#f0f5fa',
+  mode: 'dark',
 }
 
 export function getTheme(colorMode: ColorMode): Theme {
