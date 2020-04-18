@@ -8,7 +8,7 @@ const darkShadowColor1 = 'rgba(0, 0, 0, .7)'
 
 const ThumbnailImg = Styled.img`
   width: 200px;
-  height: auto;
+  height: 100%;
   border-radius: 8px;
   box-shadow: ${props => 
     props.theme.mode === 'light' 
