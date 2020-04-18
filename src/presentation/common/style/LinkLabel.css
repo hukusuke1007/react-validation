@@ -1,0 +1,11 @@
+.linkLabel {
+  text-decoration: none;
+  color: #666;
+}
+
+.linkLabel:hover, .linkLabel:visited {
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  color: inherit;
+}

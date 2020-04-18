@@ -79,17 +79,10 @@ type Prop = {
   onChange?: React.ChangeEventHandler<HTMLInputElement>,
 }
 
-export const Input: React.FC<Prop> = ({ children, style, type, value, placeholder, minLength, maxLength, onClick, onChange }, ) => {
+export const Input: React.FC<Prop> = ({ children, ...props }, ) => {
   return (
     <StyledInput 
-      style={style}
-      type={type}
-      value={value}
-      placeholder={placeholder}
-      minLength={minLength}
-      maxLength={maxLength}
-      onClick={onClick}
-      onChange={onChange}
+      {...props}
     >
       {children}
     </StyledInput>

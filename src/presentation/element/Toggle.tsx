@@ -95,11 +95,11 @@ const StyledLabel = Styled.label`
 
 type Prop = {
   defaultChecked?: boolean,
-  isCheck?: boolean,
+  checked?: boolean,
   onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void,
 }
 
-export const Toggle: React.FC<Prop> = ({ defaultChecked, isCheck, onClick }, ) => {
+export const Toggle: React.FC<Prop> = ({ ...props }, ) => {
   return (
     <div style={{
       position: 'relative',
@@ -109,9 +109,7 @@ export const Toggle: React.FC<Prop> = ({ defaultChecked, isCheck, onClick }, ) =
     }}>
       <StyledInput 
         type='checkbox' 
-        defaultChecked={defaultChecked}
-        checked={isCheck} 
-        onClick={onClick}
+        {...props}
       />
       <StyledLabel />
       <span></span>

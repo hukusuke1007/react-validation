@@ -9,6 +9,7 @@ import * as TextArea from './TextArea'
 import * as Card from './Card'
 import * as Img from './Img'
 import * as Select from './Select'
+import * as MaterialButton from './MaterialButton'
 export {
   Button,
   Div,
@@ -21,4 +22,5 @@ export {
   Card,
   Img,
   Select,
+  MaterialButton,
 }

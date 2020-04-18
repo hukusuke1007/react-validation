@@ -24,11 +24,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Redux logger
 - [x] Firebase連携
 - [x] listener周り
-- [ ] Neumorphism
+- [x] Neumorphism
 - [ ] カルーセル
 - [ ] グラフ
 - [ ] カレンダー
-- [ ] test
+- [x] test
 
 
 https://react-validation-86b59.web.app/

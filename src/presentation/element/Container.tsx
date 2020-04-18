@@ -10,9 +10,9 @@ type Prop = {
   style?: React.CSSProperties,
 }
 
-export const Container: React.FC<Prop> = ({ children, style, }, ) => {
+export const Container: React.FC<Prop> = ({ children, ...props }, ) => {
   return (
-    <StyledDiv style={style}>
+    <StyledDiv {...props}>
       {children}
     </StyledDiv>
   )

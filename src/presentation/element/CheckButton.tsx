@@ -141,11 +141,11 @@ type Prop = {
   style?: React.CSSProperties,
   size?: number,
   defaultChecked?: boolean,
-  isCheck?: boolean,
+  checked?: boolean,
   onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void,
 }
 
-export const CheckButton: React.FC<Prop> = ({ children, style, size, defaultChecked, isCheck, onClick }, ) => {
+export const CheckButton: React.FC<Prop> = ({ children, style, size, defaultChecked, checked, onClick }, ) => {
   return (
     <StyledDiv style={{
       ...style,
@@ -155,7 +155,7 @@ export const CheckButton: React.FC<Prop> = ({ children, style, size, defaultChec
       <StyledInput 
         type='checkbox' 
         defaultChecked={defaultChecked}
-        checked={isCheck} 
+        checked={checked} 
         onClick={onClick}
       />
       <StyledLabel

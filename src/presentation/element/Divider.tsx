@@ -33,9 +33,9 @@ type Prop = {
   style?: React.CSSProperties,
 }
 
-export const Divider: React.FC<Prop> = ({ children, style, }, ) => {
+export const Divider: React.FC<Prop> = ({ children, ...props }, ) => {
   return (
-    <StyledHr style={style}>
+    <StyledHr {...props}>
       {children}
     </StyledHr>
   )

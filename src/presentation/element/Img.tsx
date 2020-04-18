@@ -45,25 +45,15 @@ type Prop = {
   title?: string,
 }
 
-export const Img: React.FC<Prop> = ({ style, type, src, width, height, alt, title, }, ) => {
-  if (type === imgType.avatar) {
+export const Img: React.FC<Prop> = ({ ...props }, ) => {
+  if (props.type === imgType.avatar) {
     return <AvatarImg 
-      style={style}
-      src={src}
-      width={width}
-      height={height}
-      alt={alt}
-      title={title}
+      {...props}
     />
   } 
   return (
     <ThumbnailImg 
-      style={style}
-      src={src}
-      width={width}
-      height={height}
-      alt={alt}
-      title={title}
+      {...props}
     />
   )
 }

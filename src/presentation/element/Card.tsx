@@ -64,7 +64,7 @@ type Prop = {
 }
 
 export const Card: React.FC<Prop> = ({ children, style, type }, ) => {
-  if (type == cardType.concave) {
+  if (type === cardType.concave) {
     return (
       <ConcaveDiv style={style}>
         {children}

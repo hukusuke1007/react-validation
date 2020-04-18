@@ -84,14 +84,10 @@ type SelectProp = {
   onChange?: React.ChangeEventHandler<HTMLSelectElement>,
 }
 
-export const Select: React.FC<SelectProp> = ({ children, style, defaultValue, value, onClick, onChange }, ) => {
+export const Select: React.FC<SelectProp> = ({ children, ...props }, ) => {
   return (
     <StyledSelect 
-      style={style}
-      defaultValue={defaultValue}
-      value={value}
-      onClick={onClick}
-      onChange={onChange}
+      {...props}
     >
       {children}
     </StyledSelect>
@@ -103,11 +99,10 @@ type MenuItemProp = {
   value?: string | number,
 }
 
-export const MenuItem: React.FC<MenuItemProp> = ({ children, style, value, }, ) => {
+export const MenuItem: React.FC<MenuItemProp> = ({ children, ...props }, ) => {
   return (
     <StyledOption 
-      style={style}
-      value={value}
+      {...props}
     >
       {children}
     </StyledOption>

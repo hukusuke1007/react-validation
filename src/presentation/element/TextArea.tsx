@@ -67,18 +67,12 @@ type Prop = {
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement>,
 }
 
-export const TextArea: React.FC<Prop> = ({ children, style, value, placeholder, minLength, maxLength, rows, cols, onClick, onChange }, ) => {
+export const TextArea: React.FC<Prop> = ({ children, ...props }, ) => {
   return (
     <StyledTextArea 
-      style={style}
-      value={value}
-      placeholder={placeholder}
-      minLength={minLength}
-      maxLength={maxLength}
-      rows={rows ? rows : 3}
-      cols={cols ? cols : 30}
-      onClick={onClick}
-      onChange={onChange}
+      {...props}
+      rows={props.rows ? props.rows : 3}
+      cols={props.cols ? props.cols : 30}
     >
       {children}
     </StyledTextArea>

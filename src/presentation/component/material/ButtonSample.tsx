@@ -70,7 +70,9 @@ export const ButtonSample = () => {
         <Button>Default</Button>
         <Button color="primary">Primary</Button>
         <Button disabled>Disabled</Button>
-        <Button href="#text-buttons" color="primary">
+        <Button href="#text-buttons" style={{
+          color: 'red',
+        }}>
           Link
         </Button>
         <Button variant="outlined" color="primary">

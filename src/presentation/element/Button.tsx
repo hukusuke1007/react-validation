@@ -1,9 +1,5 @@
 import React from 'react'
 import Styled from '../theme/Styled'
-import '../../App.css'
-
-// https://neumorphism.io/#ffffff
-
 
 /** 
  * Button
@@ -107,21 +103,23 @@ type Prop = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void,
 }
 
-export const Button: React.FC<Prop> = ({ children, style, onClick }, ) => {
+export const Button: React.FC<Prop> = ({ children, ...props }, ) => {
   return (
-    <StyledButton style={style} onClick={onClick}>
+    <StyledButton {...props}>
       {children}
     </StyledButton>
   )
 }
 
-export const CircleButton: React.FC<Prop> = ({ children, style, onClick }, ) => {
+export const CircleButton: React.FC<Prop> = ({ children, ...props }, ) => {
   return (
-    <StyledButton style={{
-      width: 60,
-      height: 60,
-      ...style,
-    }} onClick={onClick}>
+    <StyledButton 
+      style={{
+        width: 60,
+        height: 60,
+      }}
+      {...props}
+    >
       {children}
     </StyledButton>
   )
