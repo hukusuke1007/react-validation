@@ -6,6 +6,7 @@ import * as Divider from './Divider'
 import * as Toggle from './Toggle'
 import * as CheckButton from './CheckButton'
 import * as TextArea from './TextArea'
+import * as Card from './Card'
 export {
   Button,
   Div,
@@ -15,4 +16,5 @@ export {
   Toggle,
   CheckButton,
   TextArea,
+  Card,
 }

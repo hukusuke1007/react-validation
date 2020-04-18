@@ -105,6 +105,31 @@ export const Neumorphism = () => {
             />
           </div>
           <div style={style}>
+            <element.Card.Card
+              type={'concave'}
+              style={{
+                margin: 'auto',
+                width: 200,
+                height: 100,
+                textAlign: 'left',
+              }}
+            >
+              Card
+            </element.Card.Card>
+          </div>
+          <div style={style}>
+            <element.Card.Card
+              style={{
+                margin: 'auto',
+                width: 200,
+                height: 100,
+                textAlign: 'left',
+              }}
+            >
+              Card
+            </element.Card.Card>
+          </div>
+          <div style={style}>
             <element.Divider.Divider /> 
           </div>
         </element.Div.Div>
