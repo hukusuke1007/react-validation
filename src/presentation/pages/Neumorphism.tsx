@@ -2,7 +2,9 @@ import React from 'react'
 import '../../App.css'
 import * as element from '../element'
 import { DarkModeSample } from '../component/Sample'
-import DeleteIcon from '@material-ui/icons/Delete'
+import thumbnail from '../../common/images/sample.jpg'
+import avatar1 from '../../common/images/avatar1.jpg'
+import avatar2 from '../../common/images/avatar2.jpg'
 
 /**
  *  White 
@@ -23,7 +25,7 @@ import DeleteIcon from '@material-ui/icons/Delete'
  */
 
 const style = {
-  margin: '32px'
+  margin: '32px 0px'
 }
 
 export const Neumorphism = () => {
@@ -44,7 +46,7 @@ export const Neumorphism = () => {
         justifyContent: 'center',
       }}>
         <element.Div.Div style={{
-          width: '90%',
+          width: '100%',
           height: '100%',
         }}>
           <div style={style}>
@@ -109,24 +111,50 @@ export const Neumorphism = () => {
               type={'concave'}
               style={{
                 margin: 'auto',
-                width: 200,
-                height: 100,
-                textAlign: 'left',
+                width: '300px',
+                display: 'flex',
+                justifyContent: 'center',
               }}
             >
-              Card
+              <element.Img.Img 
+                type='thumbnail'
+                src={thumbnail}
+              />
             </element.Card.Card>
           </div>
           <div style={style}>
             <element.Card.Card
               style={{
                 margin: 'auto',
-                width: 200,
-                height: 100,
-                textAlign: 'left',
+                width: '300px',
+                display: 'flex',
+                flexDirection: 'row',
               }}
-            >
-              Card
+            >                 
+              <div>
+                <element.Img.Img 
+                  type='avatar'
+                  src={avatar2}
+                />
+              </div>
+              <div style={{
+                margin: '0px 16px',
+                textAlign: 'left',
+              }}>
+                <p style={{
+                  fontWeight: 'bold',
+                  marginBottom: 8,
+                }}>shohei</p>
+                <p style={{
+                  fontSize: 14,
+                  marginBottom: 12,
+                }}>Hey guy! This is shohei. I love Neumorphism design.</p>
+                <div style={{
+                  fontSize: 14,
+                  color: 'grey',
+                  textAlign: 'right',
+                }}>2020.12.31</div>
+              </div>
             </element.Card.Card>
           </div>
           <div style={style}>

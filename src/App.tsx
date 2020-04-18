@@ -23,6 +23,7 @@ import * as modules from './domain/redux/modules'
  * DarkMode
  */
 const Container = Styled.div`
+  height: 100%;
   background: ${props => props.theme.background};
   color: ${props => props.theme.color};
 `

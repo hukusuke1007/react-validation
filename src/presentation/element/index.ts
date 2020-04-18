@@ -7,6 +7,7 @@ import * as Toggle from './Toggle'
 import * as CheckButton from './CheckButton'
 import * as TextArea from './TextArea'
 import * as Card from './Card'
+import * as Img from './Img'
 export {
   Button,
   Div,
@@ -17,4 +18,5 @@ export {
   CheckButton,
   TextArea,
   Card,
+  Img,
 }

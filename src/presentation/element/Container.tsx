@@ -4,7 +4,6 @@ import '../../App.css'
 
 const StyledDiv = Styled.div`
   background: ${props => props.theme.background};
-  height: 100%;
 `
 
 type Prop = {

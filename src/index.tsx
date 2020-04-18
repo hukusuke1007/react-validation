@@ -20,6 +20,7 @@ import firebase from 'firebase/app'
 import * as Ballcap from '@1amageek/ballcap'
 import 'firebase/firestore'
 import { firebaseConfig } from './config/FirebaseConfig'
+import Styled from './presentation/theme/Styled'
 
 console.log('process_env', process.cwd(), process.env)
 /** Firebase */
