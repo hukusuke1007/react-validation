@@ -10,7 +10,7 @@ const lightShadowColor2 = 'rgba(55, 84, 170, .15)'
 const darkShadowColor1 = 'rgba(76, 78, 90, .5)' 
 const darkShadowColor2 = 'rgba(76, 78, 90, .7)'
 
-const Div = Styled.div`
+const StyledDiv = Styled.div`
   padding: 8px;
   border-radius: 50px;
   background: ${props => 
@@ -30,10 +30,10 @@ type Prop = {
   style?: React.CSSProperties,
 }
 
-export const SampleDiv: React.FC<Prop> = ({ children, style, }, ) => {
+export const Div: React.FC<Prop> = ({ children, style, }, ) => {
   return (
-    <Div style={style}>
+    <StyledDiv style={style}>
       {children}
-    </Div>
+    </StyledDiv>
   )
 }

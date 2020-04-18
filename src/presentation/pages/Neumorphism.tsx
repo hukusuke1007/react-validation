@@ -28,7 +28,7 @@ const style = {
 
 export const Neumorphism = () => {
   return (
-    <element.Container.SampleContainer
+    <element.Container.Container
       style={{
         textAlign: 'center',
       }}
@@ -43,34 +43,34 @@ export const Neumorphism = () => {
         display: 'flex',
         justifyContent: 'center',
       }}>
-        <element.Div.SampleDiv style={{
+        <element.Div.Div style={{
           width: '90%',
           height: '100%',
         }}>
           <div style={style}>
-            <element.Divider.SampleDivider /> 
+            <element.Divider.Divider /> 
           </div>
           <div style={style}>
-            <element.Button.SampleButton 
+            <element.Button.Button 
               style={{
                 width: 120
               }}
               onClick={(e) => console.log(e)} 
             >
               Button
-            </element.Button.SampleButton>
+            </element.Button.Button>
           </div>
           <div style={style}>
-            <element.Button.SampleCircleButton onClick={(e) => console.log(e)} >
+            <element.Button.CircleButton onClick={(e) => console.log(e)} >
               ！
-            </element.Button.SampleCircleButton>
+            </element.Button.CircleButton>
           </div>
           <div style={{
             margin: 'auto',
             display: 'flex',
             width: '260px',
           }}>
-            <element.Input.SampleInput
+            <element.Input.Input
               placeholder='Aa'
               onChange={(e) => {
                 console.log(e)
@@ -78,25 +78,37 @@ export const Neumorphism = () => {
             />
           </div>
           <div style={style}>
-            <element.Toggle.SampleToggle 
+            <element.Toggle.Toggle 
               onClick={(e) => {
                 console.log(e)
               }}/>
           </div>
           <div style={style}>
-            <element.CheckButton.SampleCheckButton 
+            <element.CheckButton.CheckButton 
               onClick={(e) => {
                 console.log(e)
               }}>
                 {/* https://material-ui.com/components/material-icons/ */}
                 <i className='material-icons'>power_settings_new</i>
-              </element.CheckButton.SampleCheckButton>
+              </element.CheckButton.CheckButton>
+          </div>
+          <div style={{
+            margin: 'auto',
+            display: 'flex',
+            width: '300px',
+          }}>
+            <element.TextArea.TextArea
+              placeholder='Aa'
+              onChange={(e) => {
+                console.log(e)
+              }}
+            />
           </div>
           <div style={style}>
-            <element.Divider.SampleDivider /> 
+            <element.Divider.Divider /> 
           </div>
-        </element.Div.SampleDiv>
+        </element.Div.Div>
       </div>
-    </element.Container.SampleContainer>
+    </element.Container.Container>
   )
 }

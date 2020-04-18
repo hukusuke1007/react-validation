@@ -9,7 +9,7 @@ const darkShadowColor1 = 'rgba(4, 5, 7, .5)'
 const enableColor1 = '#443DD0' // rgba(68, 61, 208)
 const enableColor2 = '#9476B0' // rgba(148, 118, 176)
 
-const Input = Styled.input`
+const StyledInput = Styled.input`
   position: absolute;
   left: 0;
   top: 0;
@@ -39,7 +39,7 @@ const Input = Styled.input`
   }
 `
 
-const Label = Styled.label`
+const StyledLabel = Styled.label`
   position: relative;
   display: inline-block;
   width: 75px;
@@ -98,7 +98,7 @@ type Prop = {
   onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void,
 }
 
-export const SampleToggle: React.FC<Prop> = ({ isCheck, onClick }, ) => {
+export const Toggle: React.FC<Prop> = ({ isCheck, onClick }, ) => {
   return (
     <div style={{
       position: 'relative',
@@ -106,8 +106,8 @@ export const SampleToggle: React.FC<Prop> = ({ isCheck, onClick }, ) => {
       height: '42px',
       margin: 'auto',
     }}>
-      <Input type='checkbox' checked={isCheck} onClick={onClick}/>
-      <Label />
+      <StyledInput type='checkbox' checked={isCheck} onClick={onClick}/>
+      <StyledLabel />
       <span></span>
     </div> 
   )

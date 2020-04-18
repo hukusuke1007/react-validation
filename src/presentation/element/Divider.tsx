@@ -7,7 +7,7 @@ const darkBgColor = '#040507' // rgba(4, 5, 7)
 
 
 // https://neumorphism.io/#ffffff
-const Hr = Styled.hr`
+const StyledHr = Styled.hr`
   height: 2px;
   
   border: none;
@@ -33,10 +33,10 @@ type Prop = {
   style?: React.CSSProperties,
 }
 
-export const SampleDivider: React.FC<Prop> = ({ children, style, }, ) => {
+export const Divider: React.FC<Prop> = ({ children, style, }, ) => {
   return (
-    <Hr style={style}>
+    <StyledHr style={style}>
       {children}
-    </Hr>
+    </StyledHr>
   )
 }

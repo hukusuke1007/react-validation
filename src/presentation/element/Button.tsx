@@ -19,7 +19,7 @@ const lightBgColor = '#DEE2EB'
 const darkShadowColor1 = 'rgba(4, 5, 7, .5)'
 const darkShadowColor2 = 'rgba(76, 78, 90, .7)'
 
-const Button = Styled.button`
+const StyledButton = Styled.button`
   padding: 8px;
 
   // buttonの要素無効
@@ -107,22 +107,22 @@ type Prop = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void,
 }
 
-export const SampleButton: React.FC<Prop> = ({ children, style, onClick }, ) => {
+export const Button: React.FC<Prop> = ({ children, style, onClick }, ) => {
   return (
-    <Button style={style} onClick={onClick}>
+    <StyledButton style={style} onClick={onClick}>
       {children}
-    </Button>
+    </StyledButton>
   )
 }
 
-export const SampleCircleButton: React.FC<Prop> = ({ children, style, onClick }, ) => {
+export const CircleButton: React.FC<Prop> = ({ children, style, onClick }, ) => {
   return (
-    <Button style={{
+    <StyledButton style={{
       width: 60,
       height: 60,
       ...style,
     }} onClick={onClick}>
       {children}
-    </Button>
+    </StyledButton>
   )
 }

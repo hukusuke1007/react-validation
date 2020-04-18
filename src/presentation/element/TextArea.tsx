@@ -5,12 +5,13 @@ import '../../App.css'
 const lightBgColor = '#DEE2EB'
 const darkBgColor = '#040507' // rgba(4, 5, 7)
 
-const StyledInput = Styled.input`
+const StyledTextArea = Styled.textarea`
   width: 100%;
   padding: 8px 16px;
   font-size: 16px;
+  resize: none;
   
-  border-radius: 32px;
+  border-radius: 16px;
   background: ${props => props.theme.mode === 'light' ? lightBgColor : darkBgColor};
   color: ${props => props.theme.mode === 'light' ? `rgba(0, 0, 0, .8)` : `rgba(255, 255, 255, .8)`};
 
@@ -54,44 +55,32 @@ const StyledInput = Styled.input`
   transition: .5s;
 `
 
-const inputType = {
-  text: 'text',
-  password: 'password',
-  checkbox: 'checkbox',
-  radio: 'radio',
-  file: 'file',
-  hidden: 'hidden',
-  submit: 'submit',
-  reset: 'reset',
-  button: 'button',
-  image: 'image',
-  toggle: 'toggle',
-};
-
 type Prop = {
   style?: React.CSSProperties,
-  type?: keyof typeof inputType,
   value?: string | string[] | number,
   placeholder?: string,
   minLength?: number,
   maxLength?: number,
-  onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void,
-  onChange?: React.ChangeEventHandler<HTMLInputElement>,
+  rows?: number,
+  cols?: number,
+  onClick?: (event: React.MouseEvent<HTMLTextAreaElement, MouseEvent>) => void,
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>,
 }
 
-export const Input: React.FC<Prop> = ({ children, style, type, value, placeholder, minLength, maxLength, onClick, onChange }, ) => {
+export const TextArea: React.FC<Prop> = ({ children, style, value, placeholder, minLength, maxLength, rows, cols, onClick, onChange }, ) => {
   return (
-    <StyledInput 
+    <StyledTextArea 
       style={style}
-      type={type}
       value={value}
       placeholder={placeholder}
       minLength={minLength}
       maxLength={maxLength}
+      rows={rows ? rows : 3}
+      cols={cols ? cols : 30}
       onClick={onClick}
       onChange={onChange}
     >
       {children}
-    </StyledInput>
+    </StyledTextArea>
   )
 }

@@ -12,7 +12,7 @@ const enableColor2 = '#9476B0' // rgba(148, 118, 176)
 
 const defaultSize = '60px'
 
-const Div = Styled.div`
+const StyledDiv = Styled.div`
   position: relative;
   margin: auto;
   display: flex;
@@ -20,7 +20,7 @@ const Div = Styled.div`
   height: ${defaultSize};
 `
 
-const Input = Styled.input`
+const StyledInput = Styled.input`
   position: absolute;
   left: 0;
   top: 0;
@@ -94,7 +94,7 @@ const Input = Styled.input`
   }
 `
 
-const Label = Styled.label`
+const StyledLabel = Styled.label`
   display: flex;
   width: ${defaultSize};
   height: ${defaultSize};
@@ -144,21 +144,21 @@ type Prop = {
   onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void,
 }
 
-export const SampleCheckButton: React.FC<Prop> = ({ children, style, size, isCheck, onClick }, ) => {
+export const CheckButton: React.FC<Prop> = ({ children, style, size, isCheck, onClick }, ) => {
   return (
-    <Div style={{
+    <StyledDiv style={{
       width: size,
       height: size,
     }}>
-      <Input type='checkbox' checked={isCheck} onClick={onClick}/>
-      <Label
+      <StyledInput type='checkbox' checked={isCheck} onClick={onClick}/>
+      <StyledLabel
         style={{
           width: size,
           height: size,
         }}
       >
         {children}
-      </Label>
-    </Div>
+      </StyledLabel>
+    </StyledDiv>
   )
 }
