@@ -107,6 +107,21 @@ export const Neumorphism = () => {
             />
           </div>
           <div style={style}>
+            <element.Select.Select
+              defaultValue={2}
+              style={{
+                width: '300px',
+              }}
+              onChange={(e) => {
+                console.log(e.target.value)
+              }}
+            >
+              <element.Select.MenuItem value={0}>Dog</element.Select.MenuItem>
+              <element.Select.MenuItem value={1}>Cat</element.Select.MenuItem>
+              <element.Select.MenuItem value={2}>Tiger</element.Select.MenuItem>
+            </element.Select.Select>
+          </div>
+          <div style={style}>
             <element.Card.Card
               type={'concave'}
               style={{
