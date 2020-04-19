@@ -48,6 +48,10 @@ cp dotenvsample .production.env
 yarn start
 ```
 
+```sh
+# test
+yarn jest
+```
 
 ## ORETEKI Procedure
 
@@ -110,7 +114,7 @@ cp dotenvsample .production.env
 ```json
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2018",
     "lib": [
       "dom",
       "dom.iterable",

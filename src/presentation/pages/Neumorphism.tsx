@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../App.css'
 import * as element from '../element'
 import { DarkModeSample } from '../component/Sample'
@@ -29,6 +29,8 @@ const style = {
 }
 
 export const Neumorphism = () => {
+  const [thumbnailFile, setThumbnail] = useState<string>()
+  const [avatarFile, setAvatar] = useState<string>()
   return (
     <element.Container.Container
       style={{
@@ -133,7 +135,9 @@ export const Neumorphism = () => {
             >
               <element.Img.Img 
                 type='thumbnail'
-                src={thumbnail}
+                img={{
+                  src: thumbnail,
+                }}
               />
             </element.Card.Card>
           </div>
@@ -149,7 +153,9 @@ export const Neumorphism = () => {
               <div>
                 <element.Img.Img 
                   type='avatar'
-                  src={avatar2}
+                  img={{
+                    src: avatar2,
+                  }}
                 />
               </div>
               <div style={{
@@ -171,6 +177,37 @@ export const Neumorphism = () => {
                 }}>2020.12.31</div>
               </div>
             </element.Card.Card>
+          </div>
+          <div style={{
+            ...style,
+            display: 'flex',
+          }}>
+            <element.Img.ImgFile
+              type={'thumbnail'}
+              img={{
+                src: thumbnailFile,
+                width: 300,
+              }}
+              onChange={(_, binary) => {
+                setThumbnail(typeof binary === 'string' ? binary : undefined)
+              }}
+            />
+          </div>
+          <div style={{
+            ...style,
+            display: 'flex',
+          }}>
+            <element.Img.ImgFile
+              type={'avatar'}
+              img={{
+                src: avatarFile,
+                width: 80,
+                height: 80,
+              }}
+              onChange={(_, binary) => {
+                setAvatar(typeof binary === 'string' ? binary : undefined)
+              }}
+            />
           </div>
           <div style={style}>
             <element.Divider.Divider /> 

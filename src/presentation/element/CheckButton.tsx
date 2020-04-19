@@ -1,6 +1,5 @@
 import React from 'react'
 import Styled from '../theme/Styled'
-import '../../App.css'
 
 const lightBgColor = '#DEE2EB'
 const darkShadowColor1 = 'rgba(4, 5, 7, .5)'
