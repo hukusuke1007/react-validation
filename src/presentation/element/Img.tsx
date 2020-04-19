@@ -49,16 +49,23 @@ type ImgProp = {
 
 
 export const Img: React.FC<ImgProp> = (props, ) => {
+  // Avatar
+  const avatarSize = 60
+  // Thumbnail
+  const thumbnailWidth = 200
+  const thumbnailHeight = props.img?.width && typeof props.img.width === 'number' 
+    ? props.img?.width * (3/4) 
+    : '100%'
   return (
     <>
       {props.type === imgType.avatar 
         ? <AvatarImg {...props.img} style={{
-            width: 60,
-            height: 60,
+            width: props.img?.width ? props.img.width : avatarSize,
+            height:  props.img?.height ? props.img.height : avatarSize,
           }} />
         : <ThumbnailImg {...props.img} style={{
-            width: 200,
-            height: '100%',
+            width: props.img?.width ? props.img.width : thumbnailWidth,
+            height: props.img?.height ? props.img.height : thumbnailHeight,
           }}/>
       }
     </>
