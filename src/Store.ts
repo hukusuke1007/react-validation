@@ -13,6 +13,7 @@ import * as modules from './domain/redux/modules'
 const createStore = (): Store<CombinedState<StoreState>, Action> => {
   const store = reduxCreateStore(
     combineReducers({
+      counter: modules.Counter.default,
       item: modules.Item.default,
     }),
     applyMiddleware(

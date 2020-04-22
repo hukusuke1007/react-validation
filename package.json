@@ -1,5 +1,5 @@
 {
-  "name": "imory-frontend",
+  "name": "react-validation",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -85,7 +85,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "yarn jest",
+    "test": "node scripts/test.js",
     "deploy": "firebase deploy --only hosting"
   },
   "eslintConfig": {

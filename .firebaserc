@@ -1,6 +1,5 @@
 {
   "projects": {
-    "develop": "links-imory",
-    "prod": "links-imory-production"
+    "default": "react-validation-86b59"
   }
 }

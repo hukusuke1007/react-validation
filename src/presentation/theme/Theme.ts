@@ -4,7 +4,7 @@ import {
  } from './Types'
 
 export const lightTheme: Theme = {
-  background: '#FFF',
+  background: '#DEE2EB',
   color: '#000000',
   linkFontColor: '#666',
   mode: 'light',

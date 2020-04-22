@@ -20,9 +20,9 @@ import firebase from 'firebase/app'
 import * as Ballcap from '@1amageek/ballcap'
 import 'firebase/firestore'
 import { firebaseConfig } from './config/FirebaseConfig'
+import Styled from './presentation/theme/Styled'
 
-console.log('env', process.env)
-
+console.log('process_env', process.cwd(), process.env)
 /** Firebase */
 Ballcap.initialize(firebase.initializeApp(firebaseConfig))
 
@@ -36,6 +36,7 @@ i18n.use(initReactI18next).init({
   fallbackLng: 'ja',
   interpolation: { escapeValue: false },
 });
+
 
 ReactDOM.render(
   // 

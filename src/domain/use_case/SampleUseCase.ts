@@ -9,6 +9,7 @@ import * as modules from '../redux/modules'
 
 export interface SampleUseCase {
   loadSample(): string 
+  increment(dispatch: Dispatch<modules.Counter.Action>): void
   saveItem(dispatch: Dispatch<modules.Item.Action>): Promise<void>
   loadItems(): Promise<Item[]>
 }
@@ -21,6 +22,10 @@ export class SampleUseCaseImpl implements SampleUseCase {
 
   loadSample(): string {
     return this.sampleRepository.loadData()
+  }
+
+  increment(dispatch: Dispatch<modules.Counter.Action>) {
+    dispatch({ type: modules.Counter.ActyonType.INCREMENT })
   }
 
   async saveItem(dispatch: Dispatch<modules.Item.Action>) {
