@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "react-validation-86b59"
+    "develop": "react-validation-86b59",
+    "prod": "react-validation-86b59"
   }
 }
