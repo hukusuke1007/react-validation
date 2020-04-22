@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@1amageek/ballcap": "^1.1.4",
+    "@1amageek/ballcap": "^1.2.1",
     "@babel/core": "7.9.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",

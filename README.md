@@ -40,9 +40,6 @@ git clone https://github.com/hukusuke1007/react-validation.git
 cd react-validation
 yarn
 
-# To setting dotenv. Make sure you add firebase apy key to env files.
-cp dotenvsample .development.env
-cp dotenvsample .production.env
 
 # run
 yarn start
