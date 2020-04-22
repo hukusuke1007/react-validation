@@ -53,7 +53,7 @@ export const FirebasePage = () => {
   const [text, onTextChange] = useState('')
   return (
     <div className='App'>
-      <h1>FirebasePageページ</h1>
+      <h1>FirebasePage</h1>
       <div style={{
         margin: '8px',
       }}>
