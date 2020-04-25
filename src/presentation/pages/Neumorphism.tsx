@@ -32,7 +32,7 @@ export const Neumorphism = () => {
   const [thumbnailFile, setThumbnail] = useState<string>()
   const [avatarFile, setAvatar] = useState<string>()
   return (
-    <element.Container.Container
+    <element.Container
       style={{
         textAlign: 'center',
       }}
@@ -47,34 +47,34 @@ export const Neumorphism = () => {
         display: 'flex',
         justifyContent: 'center',
       }}>
-        <element.Div.Div style={{
+        <element.Div style={{
           width: '100%',
           height: '100%',
         }}>
           <div style={style}>
-            <element.Divider.Divider /> 
+            <element.Divider /> 
           </div>
           <div style={style}>
-            <element.Button.Button 
+            <element.Button 
               style={{
                 width: 120
               }}
               onClick={(e) => console.log(e)} 
             >
               Button
-            </element.Button.Button>
+            </element.Button>
           </div>
           <div style={style}>
-            <element.Button.CircleButton onClick={(e) => console.log(e)} >
+            <element.CircleButton onClick={(e) => console.log(e)} >
               ！
-            </element.Button.CircleButton>
+            </element.CircleButton>
           </div>
           <div style={{
             margin: 'auto',
             display: 'flex',
             width: '260px',
           }}>
-            <element.Input.Input
+            <element.Input
               placeholder='Aa'
               onChange={(e) => {
                 console.log(e)
@@ -82,26 +82,26 @@ export const Neumorphism = () => {
             />
           </div>
           <div style={style}>
-            <element.Toggle.Toggle 
+            <element.Toggle 
               onClick={(e) => {
                 console.log(e)
               }}/>
           </div>
           <div style={style}>
-            <element.CheckButton.CheckButton 
+            <element.CheckButton 
               onClick={(e) => {
                 console.log(e)
               }}>
                 {/* https://material-ui.com/components/material-icons/ */}
                 <i className='material-icons'>power_settings_new</i>
-              </element.CheckButton.CheckButton>
+              </element.CheckButton>
           </div>
           <div style={{
             margin: 'auto',
             display: 'flex',
             width: '300px',
           }}>
-            <element.TextArea.TextArea
+            <element.TextArea
               placeholder='Aa'
               onChange={(e) => {
                 console.log(e)
@@ -109,7 +109,7 @@ export const Neumorphism = () => {
             />
           </div>
           <div style={style}>
-            <element.Select.Select
+            <element.Select
               defaultValue={2}
               style={{
                 width: '300px',
@@ -118,13 +118,13 @@ export const Neumorphism = () => {
                 console.log(e.target.value)
               }}
             >
-              <element.Select.MenuItem value={0}>Dog</element.Select.MenuItem>
-              <element.Select.MenuItem value={1}>Cat</element.Select.MenuItem>
-              <element.Select.MenuItem value={2}>Tiger</element.Select.MenuItem>
-            </element.Select.Select>
+              <element.MenuItem value={0}>Dog</element.MenuItem>
+              <element.MenuItem value={1}>Cat</element.MenuItem>
+              <element.MenuItem value={2}>Tiger</element.MenuItem>
+            </element.Select>
           </div>
           <div style={style}>
-            <element.Card.Card
+            <element.Card
               type={'concave'}
               style={{
                 margin: 'auto',
@@ -133,16 +133,16 @@ export const Neumorphism = () => {
                 justifyContent: 'center',
               }}
             >
-              <element.Img.Img 
+              <element.Img 
                 type='thumbnail'
                 img={{
                   src: thumbnail,
                 }}
               />
-            </element.Card.Card>
+            </element.Card>
           </div>
           <div style={style}>
-            <element.Card.Card
+            <element.Card
               style={{
                 margin: 'auto',
                 width: '300px',
@@ -151,7 +151,7 @@ export const Neumorphism = () => {
               }}
             >                 
               <div>
-                <element.Img.Img 
+                <element.Img 
                   type='avatar'
                   img={{
                     src: avatar2,
@@ -176,13 +176,13 @@ export const Neumorphism = () => {
                   textAlign: 'right',
                 }}>2020.12.31</div>
               </div>
-            </element.Card.Card>
+            </element.Card>
           </div>
           <div style={{
             ...style,
             display: 'flex',
           }}>
-            <element.Img.ImgFile
+            <element.ImgFile
               type={'thumbnail'}
               img={{
                 src: thumbnailFile,
@@ -197,7 +197,7 @@ export const Neumorphism = () => {
             ...style,
             display: 'flex',
           }}>
-            <element.Img.ImgFile
+            <element.ImgFile
               type={'avatar'}
               img={{
                 src: avatarFile,
@@ -210,10 +210,10 @@ export const Neumorphism = () => {
             />
           </div>
           <div style={style}>
-            <element.Divider.Divider /> 
+            <element.Divider /> 
           </div>
-        </element.Div.Div>
+        </element.Div>
       </div>
-    </element.Container.Container>
+    </element.Container>
   )
 }

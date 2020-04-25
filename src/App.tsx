@@ -18,6 +18,7 @@ import Styled from './presentation/theme/Styled'
 import { Item } from './domain/model'
 import { StoreState } from './domain/redux/StoreState'
 import * as modules from './domain/redux/modules'
+import { CustomAppBar } from './presentation/element'
 
 /**
  * DarkMode
@@ -68,11 +69,12 @@ const App = () => {
             render={({ match: { url } }) => 
               (
                 <>
-                <AppBar position="static">
+                <CustomAppBar />
+                {/* <AppBar position="static">
                   <Toolbar>
                     AppBar
                   </Toolbar>
-                </AppBar>
+                </AppBar> */}
                 <ScrollTop />
                 <Switch>
                   {homeRoutes.map((config, i) => (
