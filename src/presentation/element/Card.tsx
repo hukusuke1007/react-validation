@@ -9,7 +9,7 @@ const darkShadowColor1 = 'rgba(4, 5, 7, .7)'
 const darkShadowColor2 = 'rgba(4, 5, 7, .3)'
 const darkShadowColor3 = 'rgba(76, 78, 90, .3)'
 
-// 凹
+// おう
 const ConcaveDiv= Styled.div`
   padding: 16px;
   border-radius: 16px;
@@ -34,7 +34,7 @@ const ConcaveDiv= Styled.div`
   };
 `
 
-// 凸
+// とつ
 const ConvexDiv= Styled.div`
   padding: 16px;
   border-radius: 16px;
@@ -55,8 +55,8 @@ const ConvexDiv= Styled.div`
 
 
 const cardType = {
-  concave: 'concave', // 凹
-  convex: 'convex', // 凸
+  concave: 'concave', // おう
+  convex: 'convex', // とつ
 }
 type Prop = {
   style?: React.CSSProperties,

@@ -69,7 +69,9 @@ const App = () => {
             render={({ match: { url } }) => 
               (
                 <>
-                <CustomAppBar />
+                <CustomAppBar>
+                  AppBar
+                </CustomAppBar>
                 {/* <AppBar position="static">
                   <Toolbar>
                     AppBar
